@@ -1,0 +1,27 @@
+/*
+    VARIABLES.CSS
+
+    - Last updated: 00.00.00
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// GLOBAL VARS (USE PIXELS)
+//-----------------------------------------------------------------
+
+$fa-font-path: "/assets/fonts";
+$header-height-sm: 60px; // optimal
+$header-height-md: 130px;
+$header-height-lg: 180px;
+
+//-----------------------------------------------------------------
+// HERO HEIGHT
+//-----------------------------------------------------------------
+
+$hero-height-sm:          auto;
+$hero-height-md:          rem-calc(460); // [LOCKED]
+$hero-height-lg:          rem-calc(500); // [LOCKED]
+$hero-height-xl:          rem-calc(600); // 740 [LOCKED]
+
+//=========================================
+//
+//=========================================

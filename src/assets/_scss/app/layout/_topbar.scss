@@ -1,0 +1,110 @@
+/*
+    TOPBAR.CSS
+
+    - Last updated: 07.10.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// TOPBAR
+//-----------------------------------------------------------------
+
+.topbar {
+    @include clearfix();
+    // position: relative;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+}
+
+//-----------------------------------------------------------------
+// GENERAL UL
+//-----------------------------------------------------------------
+
+.topbar ul {
+    padding: 0; // reset
+    margin: 0; // reset
+    list-style: none; // reset
+    font-family: "Roboto Slab", sans-serif;
+    font-size: rem-calc(15);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+//=========================================
+// TOP PARENT UL
+//=========================================
+
+.topbar > ul {
+    display: table;
+    float: right;
+
+    > li {
+        position: relative; // [LOCKED]
+        float: left; // prevents hairline weirdness
+        margin: 0; // reset
+    }
+}
+
+//-----------------------------------------------------------------
+// ALL ANCHORS (INCL. DROPDOWN CHILDREN)
+//-----------------------------------------------------------------
+
+.topbar a {
+    display: block; // [LOCKED]
+}
+
+//-----------------------------------------------------------------
+// TOP PARENT ANCHORS (VISIBLE)
+//-----------------------------------------------------------------
+
+.topbar .top-parent-anchor {
+    display: block; // [LOCKED]
+    padding: rem-calc(0 16);
+    line-height: rem-calc(55); /// RESTORE <<<<
+    color: #222;
+    transition: background-color ease 300ms;
+
+    i {
+        position: relative;
+        top: 2px;
+        margin-right: 5px;
+        font-size: rem-calc(20);
+        color: darken($brand-tertiary, 30%);
+        transition: color ease 300ms;
+    }
+
+    &:hover {
+        background: $brand-tertiary;
+
+        i {
+            color: #222;
+        }
+    }
+
+    // Optional
+    &:hover > .text {
+        border-bottom: none !important;
+    }
+}
+
+//=========================================
+// ACTIVE TOP PARENT ANCHOR
+//=========================================
+
+.topbar .active .top-parent-anchor .text {
+    border-bottom: 2px solid #222;
+    padding-bottom: 1px;
+}
+
+//-----------------------------------------------------------------
+// DROPDOWNS
+//-----------------------------------------------------------------
+
+.topbar .dropdown {
+    display: none;
+}
+
+//=========================================

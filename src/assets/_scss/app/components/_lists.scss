@@ -1,0 +1,38 @@
+/*
+    LISTS.CSS
+
+    - Last updated: 16.10.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//--------------------------------------------------------------------
+// LISTS
+//--------------------------------------------------------------------
+
+.list-blockquotes {
+	@include media-breakpoint-up(md) {
+	    li {
+	    	position: relative;
+	    }
+
+	    li:first-child:after {
+	    	border-left: none;
+	    }
+
+	    li:after {
+	        content: "";
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        height: 100%;
+	        max-height: 180px;
+	        border-left: 1px solid $gray;
+	    }
+	}
+}
+
+//=========================================
+//
+//=========================================

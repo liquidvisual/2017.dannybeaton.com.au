@@ -1,0 +1,89 @@
+/*
+    SECTIONS.CSS
+
+    - Last updated: 06.10.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// SECTION BIO
+//-----------------------------------------------------------------
+
+.section-bio {
+	background: url(../assets/img/content/danny-background-bg@2x.jpg) no-repeat;
+	min-height: 600px;
+}
+
+//-----------------------------------------------------------------
+// SECTION BOOK FEATURE
+//-----------------------------------------------------------------
+
+.section-book-feature {
+	position: relative;
+	// background: #fdcb31;
+	background: #dacda0;
+	background: #edd1b7;
+
+	@include media-breakpoint-up(xl) {
+	    padding-bottom: rem-calc(120);
+	}
+
+	.book {
+		@include media-breakpoint-up(xl) {
+			position: absolute;
+			top: -100px;
+		    width: 120%;
+		    z-index: 1;
+
+		    &::after {
+				content: "";
+				position: absolute;
+				bottom: -30px;
+				left: 0;
+				width: 100%;
+				height: 40px;
+				background: black;
+				padding: 20px;
+				// box-sizing: content-box;
+				border-radius: 100%;
+				z-index: -1;
+				filter: blur(10px);
+				opacity: 0.2;
+		    }
+		}
+
+		.btn-price-sticker {
+			position: absolute;
+			top: 10%;
+			right: -10%;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// SECTION BLEED
+//-----------------------------------------------------------------
+
+.section-bleed {
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -100vw;
+		width: 200vw;
+		height: 100%;
+		background: inherit;
+		z-index: -1;
+
+		@include media-breakpoint-up(md) {
+			top: 4px;
+		    opacity: 0.8;
+		}
+	}
+}
+
+//=========================================
+//
+//=========================================

@@ -1,0 +1,35 @@
+- title: Home
+  url: /
+  icon: 'icon icon-home-house-streamline'
+
+- title: About
+  url: /about/
+  icon: 'icon icon-man-people-streamline-user'
+  include_children_in_nav: false
+  children:
+    - title: Dan & Mitch
+      url: /about/dan-and-mitch/
+    - title: Another Nerdy Podcast
+      url: /about/another-nerdy-podcast/
+
+- title: Books
+  url: /books/
+  icon: 'icon icon-book-read-streamline'
+  include_children_in_nav: false
+  children:
+    - title: Mal Winter and the Cloud Runners
+      url: /books/mal-winter-and-the-cloud-runners/
+    - title: Mal Winter and the Last Titan
+      url: /books/mal-winter-and-the-last-titan/
+
+- title: Blog
+  url: /404/
+  icon: 'icon icon-ink-pen-streamline'
+
+- title: Store
+  url: /store/
+  icon: 'icon icon-caddie-shopping-streamline'
+
+- title: Contact
+  url: /contact/
+  icon: 'icon icon-email-mail-streamline'

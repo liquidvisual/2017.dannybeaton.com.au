@@ -1,0 +1,140 @@
+/*
+    HEADER.CSS
+
+    - Last updated: 09.10.16
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$header-height-sm: 60px !default; // optimal
+$header-height-md: 60px !default;
+$header-height-lg: auto;// !default;
+
+//-----------------------------------------------------------------
+// HEADROOM
+//-----------------------------------------------------------------
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+	transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-105%);
+}
+
+//-----------------------------------------------------------------
+// HEADER
+//-----------------------------------------------------------------
+
+.global-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+
+	@include media-breakpoint-down(sm) {
+	    background: white;
+	    box-shadow: 0 0 3px 1px rgba(black, 0.2);
+	}
+
+	> .container {
+		position: relative;
+	}
+}
+
+//-----------------------------------------------------------------
+// HEADER STRIP
+//-----------------------------------------------------------------
+
+.global-header-strip {
+	@include media-breakpoint-up(lg) {
+	    background: $brand-quaternary;
+		border-top: 3px solid $brand-tertiary;
+		// border: 2px solid $brand-tertiary;
+		// box-shadow: 0 1px 5px 0px rgba(black, 0.5);
+		box-shadow: 0 0 0px 3px rgba(black, 0.2);
+	    border-radius: 0 0 5px;
+
+	    margin-left: 20px;
+	}
+}
+
+//-----------------------------------------------------------------
+// HEADER HEIGHT [LOCKED]
+//-----------------------------------------------------------------
+
+.global-header,
+.global-header-strip,
+.global-header .display-table {
+	height: $header-height-sm;
+
+	@include media-breakpoint-up(md) {
+	    height: $header-height-md;
+	}
+
+	@include media-breakpoint-up(lg) {
+		height: $header-height-lg;
+	}
+}
+
+//-----------------------------------------------------------------
+// LOGO
+//-----------------------------------------------------------------
+
+.global-header .logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	// display: none;
+
+	// display: inline-block;
+
+	@include media-breakpoint-up(md) {
+	    // top: 100px;
+	}
+
+	@include media-breakpoint-up(lg) {
+	    // top: 1000px;
+	}
+
+	@include media-breakpoint-up(xl) {
+	    top: -35px;
+	    left: -20px;
+	}
+
+	img {
+		width: 50px;
+
+		@include media-breakpoint-up(md) {
+			width: 120px;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// HAMBURGER
+//-----------------------------------------------------------------
+
+.global-mobile-menu {
+	position: absolute;
+	top: 18px;//$container-gutter;
+	right: $container-gutter/2;
+	// overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+	    top: 30px;
+	    right: $container-gutter;
+	}
+}
+
+//=========================================
+//
+//=========================================
