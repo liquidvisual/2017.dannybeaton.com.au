@@ -1,18 +1,45 @@
 {% assign settings = site.data.settings %}
 
+<!-- FOOTER TOP -->
+<section class="global-footer-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>About Danny</h3>
+                <p>Welcome to the home of new Australian author Danny Beaton. Please take the time to look around and discover more about the writer and his current and future books.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Recent Posts</h3>
+                <ul class="list-unstyled">
+                    {% for item in site.data.lorem_ipsum | limit: 4 %}
+                        <li><a href="#">{{ item.title }}</a></li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Sign up for the Newsletter</h3>
+                {% include form_subscribe.html %}
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- FOOTER BOTTOM -->
-<section class="global-footer-bottom p-y-1">
+<section class="global-footer-bottom">
     <div class="container">
 
-		<small>&copy; {{ site.time | date: '%Y' }}</small>
+		<small>&copy; <b>{{ site.time | date: '%Y' }}</b> - Danny Beaton</small>
 
-        <small class="pull-xs-right">
-        	Made by
-        	<a class="author-logo" target="_blank" href="{{ settings.author.url }}">
-            	<span class="text">{{ settings.author.description }}</span>
-            	<img width="16" height="16" src="{{ settings.author.logo }}" alt="Created by {{ settings.author.title }}">
-        	</a>
-        </small>
+        <a class="author-logo" target="_blank" href="{{ settings.author.url }}">
+            <small class="float-right">
+                <img style="opacity: 0.3;" width="18" height="18" src="{{ settings.author.logo }}" alt="Created by {{ settings.author.title }}">
+            	&nbsp;made by
+                <span class="text">{{ settings.author.description }}</span>
+            </small>
+        </a>
+
+        <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
 
     </div>
 </section>

@@ -1,7 +1,7 @@
 /*
     GLOBAL.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 06.03.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -21,19 +21,19 @@ html, body {
 
 .lv-page {
 	@include media-breakpoint-down(sm) {
-	    padding-top: $header-height-sm;
+	    padding-top: $header-sm-height;
 	}
 
 	@include media-breakpoint-up(md) {
-	    padding-top: $hero-height-md;
+	    padding-top: $hero-md-height;
 	}
 
 	@include media-breakpoint-up(lg) {
-	    padding-top: $hero-height-lg;
+	    padding-top: $hero-lg-height;
 	}
 
 	@include media-breakpoint-up(xl) {
-	    padding-top: $hero-height-xl;
+	    padding-top: $hero-xl-height;
 	}
 }
 
@@ -47,15 +47,6 @@ html, body {
 	}
 }
 
-//=========================================
-// BOOTSTRAP CENTERED COLS
-//=========================================
-
-.col-centered {
-    float: none;
-    margin: 0 auto;
-}
-
 //-----------------------------------------------------------------
 // MAIN CONTENT
 //-----------------------------------------------------------------
@@ -64,6 +55,7 @@ html, body {
 	position: relative;
 	z-index: 1;
 
+	// to allow for bleed and offsetting the top so very slightly
 	&::after {
 		content: "";
 		position: absolute;
@@ -71,17 +63,17 @@ html, body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: $body-bg;
-		z-index: -2;
+		background-color: $body-bg;
+		z-index: -1; // 1?
 	}
 
 	> .container {
 		@include media-breakpoint-down(md) {
-		    padding: rem-calc(0 15);
+		    padding: rem-calc(0 15); // reduce padding on tablets
 		}
 
 		@include media-breakpoint-down(sm) {
-		    padding: 0;
+		    padding: 0; // page depth effect is gone, grid controls padding now
 		}
 
 		//=========================================
@@ -89,6 +81,8 @@ html, body {
 		//=========================================
 
 		.main-content {
+			display: flex;
+			flex-direction: column;
 			position: relative;
 			margin-bottom: -50px;
 

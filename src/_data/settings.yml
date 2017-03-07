@@ -1,12 +1,12 @@
 # GLOBAL SITE SETTINGS
 
-cname: ________.yourwebvisual.com
+cname: dannybeaton.yourwebvisual.com
 
 # META
-title: New Website
-seo_title:
-company:
-description:
+title: Danny Beaton
+title_homepage: The Official Danny Beaton Website - Mal Winter and the Cloud Runners
+company: Danny Beaton
+description: Danny Beaton is ready to take preorders on his new book, Mal Winter and the Last Titan
 
 # SITE DEFAULTS
 site_tagline:
@@ -14,8 +14,8 @@ site_tagline:
 # DEVELOPER
 allow_robots: false
 github_repo_owner: liquidvisual
-github_repo_path: https://github.com/liquidvisual/________
-github_repo_name:
+github_repo_path: https://github.com/liquidvisual/2017.dannybeaton.com.au
+github_repo_name: 2017.dannybeaton.com.au
 jekyll_version: 3.0.3
 
 # OFFICES
@@ -24,10 +24,12 @@ offices:
     address:
 
 # SOCIAL MEDIA
-facebook:
+facebook: https://facebook.com/dannybeatonwriter
+twitter: https://twitter.com/DannyBeaton
 linked_in:
 google_plus:
-instagram:
+instagram: http://instagram.com/dannybeaton
+youtube: https://www.youtube.com/channel/UC4S74VhUhaL1HGv3kxYyH6Q
 
 # GOOGLE
 google_analytics: "UA-52532977-1"
@@ -36,5 +38,5 @@ google_analytics: "UA-52532977-1"
 author:
   title: Mitch
   url: http://liquidvisual.com
-  logo: /assets/img/ui/liquidvisual-logo.svg
+  logo: /assets/img/ui/liquidvisual-logo-dark1.svg
   description: liquidvisual

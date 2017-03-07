@@ -1,69 +1,48 @@
 {% comment %}
     LIQUIDVISUAL-HERO
 
-    - updated: 06.10.16
+    - updated: 06.03.17
     - notes:
         * Multiple items in carousel_slides.yml triggers carousel mode
         * .has-auto-height - caption will detemine height
         * .has-fixed-height - used for internal pages to set a height
 {% endcomment %}
 
-{% assign hero_images = site.data.carousel_slides %}
-
 <div class="lv-hero-wrapper">
 
     <!-- HERO -->
     <div class="lv-hero">
 
-        {% for hero in hero_images %}
+        <!-- HERO ITEM -->
+        <div class="lv-hero-item align-items-end">
 
-            <!-- HERO ITEM -->
-            <div class="lv-hero-item" style="background-image: url(/assets/img/layout/clouds-layer-1-blurred.jpg)">
-                <div class="lv-hero-item-table" style="background-image: url(/assets/img/layout/clouds-layer-2-blurred.png)">
-                    <div class="lv-hero-item-table-cell v-align-bottom">
+            <!-- PARALLAX BG -->
+            <div class="bg-layers layer" data-depth="0.3">
+                <div class="bg-layer-1" style="background-image: url(/assets/img/layout/clouds-layer-1.jpg)"></div>
+                <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
+            </div>
 
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4 push-md-8 text-xs-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 push-md-8 text-center">
 
-                                    <div class="lv-hero-item-caption">
-                                        <img width="100%" src="/assets/img/content/hero-mal-text@2x.png" alt="Mal Winter and the Cloud Runners - Available Now">
-                                        <a class="btn btn-primary hidden-sm-down m-t-2" href="#moooore"><i class="fa fa-hand-o-right"></i>&nbsp; Learn more</a>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-8 pull-md-4 text-xs-center">
-                                    <img width="100%" class="lv-hero-character" src="/assets/img/content/hero-mal@2x.png" alt="Mal Winter and the Cloud Runners, Pre-order today">
-                                </div>
-
-                            </div>
+                        <!-- HERO CAPTION -->
+                        <div class="lv-hero-item-caption">
+                            <img width="100%" src="/assets/img/content/hero-mal-text@2x.png" alt="Mal Winter and the Cloud Runners - Available Now">
+                            <br>
+                            <br>
+                            <a class="btn btn-primary hidden-sm-down" href="#moooore"><i class="fa fa-hand-o-right"></i>&nbsp; Learn more</a>
                         </div>
 
                     </div>
-                </div>
-            </div>
+                    <div class="col-md-8 pull-md-4 text-center">
 
-        {% endfor %}
+                        <!-- SUPPORTING IMAGE -->
+                        <img width="100%" class="lv-hero-character layer" data-depth="0.5" src="/assets/img/content/hero-mal@2x.png" alt="Mal Winter and the Cloud Runners, Pre-order today">
 
+                    </div>
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.lv-hero-item -->
     </div> <!-- /.lv-hero -->
-
-    {% comment %}
-    <!-- CAROUSEL CONTROLS -->
-    <div class="lv-hero-carousel-controls">
-        <div class="container">
-            <span href="#" class="lv-hero-carousel-prev-btn"><i class="fa fa-angle-left"></i></span>
-            <span href="#" class="lv-hero-carousel-next-btn"><i class="fa fa-angle-right"></i></span>
-        </div>
-    </div>
-
-    <!-- CAROUSEL BULLETS -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="lv-hero-carousel-bullets"></div>
-            </div>
-        </div>
-    </div>
-    {% endcomment %}
-
 </div> <!-- /.lv-hero-wrapper -->

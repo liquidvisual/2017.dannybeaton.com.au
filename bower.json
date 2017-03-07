@@ -11,7 +11,7 @@
     "magnific-popup": "https://github.com/dimsemenov/Magnific-Popup.git#master",
     "slick.js": "~1.5.9",
     "tether": "^1.2.0",
-    "bootstrap": "v4.0.0-alpha.4",
+    "bootstrap": "v4.0.0-alpha.6",
     "bootstrap-validator": "^0.10.1",
     "headroom": "https://npmcdn.com/headroom.js@0.8.0/dist/headroom.js"
   },

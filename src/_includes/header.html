@@ -1,22 +1,28 @@
 {% assign settings = site.data.settings %}
-{% assign logo = "http://dannybeaton.com.au/img/content/logo@2x.png" %}
+{% assign logo = "/assets/img/content/logo.svg" %}
 
-<div class="display-table">
-    <div class="display-cell">
+<div class="container">
+    <div class="global-header-bg">
 
         <!-- LOGO -->
-        <a class="logo" href="/" title="{{ settings.seo_title }}" itemprop="url">
-            <img src="{{ logo }}" alt="{{ settings.company_title }}" itemprop="logo">
+        <a class="logo" href="/" title="{{ settings.title_homepage }}" itemprop="url">
+            <img src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
         </a>
 
         <!-- HAMBURGER -->
-        <div class="global-mobile-menu hidden-xl-up">
+        <div class="global-header-hamburger hidden-xl-up">
             <div class="lv-hamburger" data-menu-toggle>
                 <span class="lv-hamburger-top"></span>
                 <span class="lv-hamburger-middle"></span>
                 <span class="lv-hamburger-bottom"></span>
+                <span class="lv-hamburger-hit"></span>
             </div>
         </div>
+
+        <!-- NAVIGATION -->
+        <nav class="lv-topbar hidden-lg-down">
+            {% include snippets/navigation.html %}
+        </nav>
 
     </div>
 </div>

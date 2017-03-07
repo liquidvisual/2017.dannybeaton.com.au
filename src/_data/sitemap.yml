@@ -15,7 +15,7 @@
 - title: Books
   url: /books/
   icon: 'icon icon-book-read-streamline'
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: Mal Winter and the Cloud Runners
       url: /books/mal-winter-and-the-cloud-runners/

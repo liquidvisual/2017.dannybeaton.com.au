@@ -1,7 +1,7 @@
 /*
     HERO.CSS
 
-    - Last updated: 09.10.16
+    - Last updated: 06.03.17
     - liquidvisual.com
     - notes:
         * liquidvisual recommends bxSlider for hero carousels
@@ -11,12 +11,12 @@
 // VARIABLES
 //-----------------------------------------------------------------
 
-$hero-height-sm:              auto          !default; // default: auto // IMPORTANT: if carousel slides, you need a fixed height
-$hero-height-md:              rem-calc(575) !default;
-$hero-height-md-fixed:        rem-calc(575) !default;
-$hero-height-lg:              rem-calc(600) !default;
-$hero-height-xl:              rem-calc(600) !default;
-$hero-carousel-bullet-size:   rem-calc(16)  !default;
+$hero-sm-height:              auto          !default; // default: auto // IMPORTANT: if carousel slides, you need a fixed height
+$hero-md-height:              rem-calc(575) !default;
+$hero-md-height-fixed:        rem-calc(575) !default;
+$hero-lg-height:              rem-calc(600) !default;
+$hero-xl-height:              rem-calc(600) !default;
+$cloud-speed:                 10 !default;
 
 //-----------------------------------------------------------------
 // HERO WRAPPER
@@ -36,11 +36,44 @@ $hero-carousel-bullet-size:   rem-calc(16)  !default;
 
 //-----------------------------------------------------------------
 // CLOUDS SCROLLING ANIMATION
+//
+// from { background-position: 0 0; }
+// to { background-position: 100% 0; }
 //-----------------------------------------------------------------
 
-@keyframes hero-bg-scroller {
-    from { background-position: 0 0; }
-    to { background-position: 100% 0; }
+@keyframes hero-layer-1-scroller {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+@keyframes hero-layer-2-scroller {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+//-----------------------------------------------------------------
+// BG LAYERS
+//-----------------------------------------------------------------
+
+.bg-layers {
+    height: 100%;
+
+    .bg-layer-1,
+    .bg-layer-2 {
+        position: absolute;
+        top: 0; // 10px
+        left: 0;
+        width: 2820px * $cloud-speed;
+        height: 100%;
+        background-size: 2820px;
+        background-repeat: repeat-x;
+        background-position: bottom;
+        animation: hero-layer-1-scroller #{300*$cloud-speed}s linear infinite;
+    }
+
+    .bg-layer-2 {
+        animation: hero-layer-2-scroller #{300*$cloud-speed/2}s linear infinite;
+    }
 }
 
 //-----------------------------------------------------------------
@@ -52,18 +85,18 @@ $hero-carousel-bullet-size:   rem-calc(16)  !default;
 .lv-hero {
     width: 100%; // added last minute - breaking?
     overflow: hidden; // causes problems without JS
-    height: $hero-height-sm;
+    height: $hero-sm-height;
 
     @include media-breakpoint-up(md) {
-        height: $hero-height-md;
+        height: $hero-md-height;
     }
 
     @include media-breakpoint-up(lg) {
-       height: $hero-height-lg;
+       height: $hero-lg-height;
     }
 
     @include media-breakpoint-up(xl) {
-       height: $hero-height-xl;
+       height: $hero-xl-height;
     }
 
     //=========================================
@@ -91,54 +124,54 @@ $hero-carousel-bullet-size:   rem-calc(16)  !default;
         }
 
         @include media-breakpoint-up(xl) {
-           height: $hero-height-md-fixed;
+           height: $hero-md-height-fixed;
         }
     }
 }
 
 //-----------------------------------------------------------------
-// HERO - ITEM (SLIDES
+// HERO ITEM (Slides)
 //-----------------------------------------------------------------
 
-.lv-hero-item,
-.lv-hero-item-table {
-    float: left;
+.lv-hero-item {
+    display: flex;
+    // align-items: center;
+    // float: left;
     width: 100%; // need
     height: 100%;
+    background-color: $brand-primary;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    animation: hero-bg-scroller 300s linear infinite;
-}
-
-.lv-hero-item-table {
-    display: table;
-    float: none;
-    position: relative;
     // animation: hero-bg-scroller 300s linear infinite;
-
-    .lv-hero-item-table-cell {
-        display: table-cell;
-    }
-}
-
-.v-align-top {
-    vertical-align: top;
-}
-
-.v-align-middle {
-    vertical-align: middle;
-}
-
-.v-align-bottom {
-    vertical-align: bottom;
 }
 
 //-----------------------------------------------------------------
 // HOME UNIQUE
 //-----------------------------------------------------------------
 
-.lv-hero-item-table-cell {
+.lv-hero-item-caption {
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+        top: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        top: 60px;
+    }
+
+    // Mobile
+    @include media-breakpoint-down(sm) {
+        padding: rem-calc(40 20 20 20);
+    }
+}
+
+//-----------------------------------------------------------------
+// HOME UNIQUE
+//-----------------------------------------------------------------
+
+.lv-hero-item > .container {
     position: relative;
 
     @include media-breakpoint-up(md) {
@@ -146,29 +179,12 @@ $hero-carousel-bullet-size:   rem-calc(16)  !default;
     }
 
     @include media-breakpoint-up(lg) {
-        left: -45px;
+        left: -80px;
     }
 
     .lv-hero-character {
         @include media-breakpoint-up(lg) {
             width: 79%;
-        }
-    }
-
-    .lv-hero-item-caption {
-        position: relative;
-
-        @include media-breakpoint-up(md) {
-            top: 40px;
-        }
-
-        @include media-breakpoint-up(xl) {
-            top: 60px;
-        }
-
-        // Mobile
-        @include media-breakpoint-down(sm) {
-            padding: rem-calc(40 20 20 20);
         }
     }
 }

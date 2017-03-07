@@ -48,11 +48,12 @@ $gray-light:                #e7e7e7; //#818a91 !default;
 // $gray-lighter:              #eceeef !default;
 // $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #D10707 !default;
+$brand-primary:             #518eba;
 $brand-secondary:           #38A17C !default;
 $brand-tertiary:            #F9D3A4 !default;
 $brand-quaternary:          #FBEECA !default;
 $brand-quinary:             #987366 !default;
+$brand-senary:              #D10707 !default;
 
 // $brand-success:             #5cb85c !default;
 // $brand-info:                #5bc0de !default;
@@ -337,7 +338,7 @@ $btn-primary-bg:                 $brand-secondary; //$brand-primary !default;
 
 // $input-padding-x:                .75rem !default;
 // $input-padding-y:                .5rem !default;
-// $input-line-height:              1.25 !default;
+// $input-line-height:              2.1; //1.25 !default;
 
 // $input-bg:                       #fff !default;
 // $input-bg-disabled:              $gray-lighter !default;
@@ -351,7 +352,7 @@ $btn-primary-bg:                 $brand-secondary; //$brand-primary !default;
 // $input-border-radius-lg:         $border-radius-lg !default;
 // $input-border-radius-sm:         $border-radius-sm !default;
 
-// $input-bg-focus:                 $input-bg;
+$input-bg-focus:                 none; //$input-bg;
 // $input-border-focus:             #66afe9 !default;
 // $input-box-shadow-focus:         rgba(102,175,233,.6) !default;
 // $input-color-focus:              $input-color;

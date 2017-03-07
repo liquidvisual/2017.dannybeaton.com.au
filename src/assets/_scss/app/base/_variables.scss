@@ -9,18 +9,18 @@
 //-----------------------------------------------------------------
 
 $fa-font-path: "/assets/fonts";
-$header-height-sm: 60px; // optimal
-$header-height-md: 130px;
-$header-height-lg: 180px;
+$header-sm-height: 60px; // optimal
+$header-md-height: 130px;
+$header-lg-height: 180px;
 
 //-----------------------------------------------------------------
 // HERO HEIGHT
 //-----------------------------------------------------------------
 
-$hero-height-sm:          auto;
-$hero-height-md:          rem-calc(460); // [LOCKED]
-$hero-height-lg:          rem-calc(500); // [LOCKED]
-$hero-height-xl:          rem-calc(600); // 740 [LOCKED]
+$hero-sm-height:          auto;
+$hero-md-height:          rem-calc(460); // [LOCKED]
+$hero-lg-height:          rem-calc(500); // [LOCKED]
+$hero-xl-height:          rem-calc(600); // 740 [LOCKED]
 
 //=========================================
 //
