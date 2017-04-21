@@ -5,6 +5,7 @@ layout: base
 {% assign settings = site.data.settings %}
 {% assign featured = site.data.sitemap[3].children | where: "featured", true %}
 
+{% comment %}
 <div class="container">
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -14,23 +15,23 @@ layout: base
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
-{% comment %}
+{% endcomment %}
 
 <section>
 	<div class="container py-5">
-		<div class="row">
-			<div class="col-md-9 col-centered text-xs-center">
+		<div class="row justify-content-md-center">
+			<div class="col-md-9 text-center">
 
 				<!-- AN EXCITING BOOK FOR KIDS -->
 
 				<h1>An Exciting New Adventure Book for Children</h1>
 				<p class="lead">"The night he watched his father die, Mal learned of the dark creatures that lurk in dreams, hungry for sleeping souls. Mal Winter, a young would-be hero, must traverse dreamscapes to learn the legacy of the Cloud Runners. He'll need to fight his greatest demons to save his family and friends from the unimaginable."</p>
 
-				<div class="spacer m-b-3"></div>
+				<div class="spacer mb-3"></div>
 
 				<!--  WHAT THEY'RE SAYING -->
 
-				<h3 class="m-b-3">Kids Are Saying...</h3>
+				<h3 class="mb-3">Kids Are Saying...</h3>
 
 				<ul class="block-grid-md-3 list-blockquotes">
 					<li><blockquote><p>"Perfect. Wouldn't change anything. I want to read the next one."</p><cite>Bailey, Age 9</cite></blockquote></li>
@@ -42,7 +43,7 @@ layout: base
 	</div>
 </section>
 
-<section class="jumbotron jumbotron-fluid m-b-0 section-book-feature section-bleed">
+<section class="jumbotron jumbotron-fluid mb-0 section-book-feature section-bleed">
 	<div class="container" style="max-width: 900px;">
 		<div class="row">
 			<div class="col-md-8">
@@ -68,7 +69,7 @@ layout: base
 </section>
 
 <!-- ABOUT DANNY -->
-<section class="p-y-3 section-bio">
+<section class="py-3 section-bio">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 offset-md-4 text-xs-center">
@@ -84,4 +85,3 @@ layout: base
 	</div>
 </section>
 
-{% endcomment %}

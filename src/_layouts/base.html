@@ -38,6 +38,10 @@
         <main class="main-content-container" hiddenX>
             <div class="container">
                 <div class="main-content">
+
+                    {{ content }}
+
+                    {% comment %}
                     {% for i in (1..1)  %}
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -46,6 +50,8 @@
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     {% endfor %}
+                    {% endcomment %}
+
                 </div>
             </div>
         </main>
@@ -95,11 +101,11 @@
 
     <script>
 
-        // CLOUD PARALLAX
+        //CLOUD PARALLAX
         // var target = $('.lv-hero-item')[0];
         // var parallax = new Parallax(target, {
-        //     limitX: 0,
-        //     limitY: 10,
+        //     limitX: 8,
+        //     limitY: 0,
         // });
 
     </script>

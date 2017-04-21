@@ -2,27 +2,26 @@
 {% assign logo = "/assets/img/content/logo.svg" %}
 
 <div class="container">
-    <div class="global-header-bg">
 
-        <!-- LOGO -->
-        <a class="logo" href="/" title="{{ settings.title_homepage }}" itemprop="url">
-            <img src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
-        </a>
+    <!-- LOGO -->
+    <a class="logo" href="/" title="{{ settings.title_homepage }}" itemprop="url">
+        <img src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
+        <span class="text">Danny Beaton</span>
+    </a>
 
-        <!-- HAMBURGER -->
-        <div class="global-header-hamburger hidden-xl-up">
-            <div class="lv-hamburger" data-menu-toggle>
-                <span class="lv-hamburger-top"></span>
-                <span class="lv-hamburger-middle"></span>
-                <span class="lv-hamburger-bottom"></span>
-                <span class="lv-hamburger-hit"></span>
-            </div>
+    <!-- HAMBURGER -->
+    <div class="global-header-hamburger hidden-xl-up">
+        <div class="lv-hamburger" data-menu-toggle>
+            <span class="lv-hamburger-top"></span>
+            <span class="lv-hamburger-middle"></span>
+            <span class="lv-hamburger-bottom"></span>
+            <span class="lv-hamburger-hit"></span>
         </div>
-
-        <!-- NAVIGATION -->
-        <nav class="lv-topbar hidden-lg-down">
-            {% include snippets/navigation.html %}
-        </nav>
-
     </div>
+
+    <!-- NAVIGATION -->
+    <nav class="lv-topbar hidden-lg-down">
+        {% include snippets/navigation.html %}
+    </nav>
+
 </div>

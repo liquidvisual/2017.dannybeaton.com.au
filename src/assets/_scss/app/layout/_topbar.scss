@@ -12,9 +12,13 @@
 //-----------------------------------------------------------------
 
 .lv-topbar {
-    // margin: auto -15px auto auto;
-    // margin-top: 30px;
-    // justify-content: flex-right;
+    // margin-top: 15px;
+    margin-left: auto;
+    // border-top: 3px solid $brand-tertiary;
+    // box-shadow: 0 1px 5px 0px rgba(black, 0.5);
+    box-shadow: 0 0 0px 4px rgba(black, 0.2);
+    border-radius: 5px;
+    background: $brand-quaternary;
     transition: margin 300ms ease;
 }
 
@@ -38,26 +42,7 @@
 
 .lv-topbar > ul {
     display: flex;
-    flex-wrap: wrap;
-    // width: 1150px;
-    // background: red;
-    // justify-content: flex-end;
-    // justify-content: space-between;
-    // justify-content: center;
-
-    > li:nth-child(3) {
-        // float: left;
-        // margin-left: auto;
-        // margin-right: 60px;
-    }
-
-    > li:nth-child(4) {
-        // float: right;
-        // margin-right: auto;
-        // margin-left: 100px;
-    }
-
-
+    // flex-wrap: wrap;
 
     > li {
         position: relative; // [LOCKED]
@@ -71,7 +56,7 @@
 
 .lv-topbar a {
     display: block; // [LOCKED]
-    padding: rem-calc(5 15);
+    padding: rem-calc(8 15);
     color: $body-color;
     transition: background-color 200ms ease;
 }
@@ -90,10 +75,11 @@
 
     i {
         position: relative;
-        top: 2px;
+        top: 3px;
         margin-right: 5px;
         font-size: rem-calc(20);
         color: darken($brand-tertiary, 30%);
+        // line-height: 0;
         transition: color ease 300ms;
     }
 
@@ -117,8 +103,20 @@
 //=========================================
 
 .lv-topbar .active .top-parent-anchor .text {
-    border-bottom: 3px solid #222;
-    padding-bottom: 2px;
+    position: relative;
+    // border-bottom: 3px solid #222;
+    // padding-bottom: 2px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: calc(50% - 5px/2);
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background: black;
+    }
 }
 
 //-----------------------------------------------------------------
