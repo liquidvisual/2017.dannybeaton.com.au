@@ -20,10 +20,6 @@ html, body {
 //-----------------------------------------------------------------
 
 .lv-page {
-	@include media-breakpoint-down(sm) {
-	    padding-top: $header-sm-height;
-	}
-
 	@include media-breakpoint-up(md) {
 	    padding-top: $hero-md-height;
 	}

@@ -12,14 +12,14 @@
 //-----------------------------------------------------------------
 
 .lv-topbar {
-    // margin-top: 15px;
+    display: flex;
+    align-items: center;
     margin-left: auto;
     // border-top: 3px solid $brand-tertiary;
     // box-shadow: 0 1px 5px 0px rgba(black, 0.5);
     box-shadow: 0 0 0px 4px rgba(black, 0.2);
-    border-radius: 5px;
+    border-radius: $border-radius;
     background: $brand-quaternary;
-    transition: margin 300ms ease;
 }
 
 //-----------------------------------------------------------------
@@ -31,9 +31,8 @@
     margin: 0; // reset
     list-style: none; // reset
     font-family: "Roboto Slab"; //$font-family-sans-serif;
-    font-size: rem-calc(15);
+    font-size: rem-calc(16);
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 //=========================================
@@ -42,11 +41,18 @@
 
 .lv-topbar > ul {
     display: flex;
-    // flex-wrap: wrap;
 
     > li {
         position: relative; // [LOCKED]
         margin: 0; // reset
+    }
+
+    > li:first-child .top-parent-anchor {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+
+    > li:last-child .top-parent-anchor {
+        border-radius: 0 $border-radius $border-radius 0;
     }
 }
 
@@ -56,7 +62,7 @@
 
 .lv-topbar a {
     display: block; // [LOCKED]
-    padding: rem-calc(8 15);
+    padding: rem-calc(15);
     color: $body-color;
     transition: background-color 200ms ease;
 }
@@ -67,8 +73,8 @@
 
 .lv-topbar .top-parent-anchor {
     display: block; // [LOCKED]
-    // padding: rem-calc(0 15);
-    line-height: rem-calc(40);
+    padding: rem-calc(0 15);
+    line-height: $header-sm-height; // secret sauce
     color: #222;
     cursor: pointer;
     transition: background-color 200ms ease;
@@ -79,7 +85,7 @@
         margin-right: 5px;
         font-size: rem-calc(20);
         color: darken($brand-tertiary, 30%);
-        // line-height: 0;
+        line-height: 0;
         transition: color ease 300ms;
     }
 
@@ -90,11 +96,6 @@
         i {
             color: #222;
         }
-    }
-
-    // Optional
-    &:hover > .text {
-        border-bottom: none !important;
     }
 }
 
@@ -115,7 +116,7 @@
         width: 5px;
         height: 5px;
         border-radius: 100%;
-        background: black;
+        background: #222;
     }
 }
 
@@ -124,8 +125,11 @@
 //-----------------------------------------------------------------
 
 .lv-topbar .has-dropdown:hover > .top-parent-anchor {
-    // background: rgba(black, 0.3);
-    // color: white;
+    background-color: $brand-tertiary;
+}
+
+.lv-topbar .has-dropdown:hover > .top-parent-anchor > i {
+    color: #222;
 }
 
 .lv-topbar .active.has-dropdown:hover > .top-parent-anchor .text {

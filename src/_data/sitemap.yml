@@ -5,10 +5,11 @@
 - title: About
   url: /about/
   icon: 'icon icon-man-people-streamline-user'
-  include_children_in_nav: false
+  include_children_in_nav: true
   children:
     - title: Dan & Mitch
       url: /about/dan-and-mitch/
+
     - title: Another Nerdy Podcast
       url: /about/another-nerdy-podcast/
 
@@ -19,6 +20,7 @@
   children:
     - title: Mal Winter and the Cloud Runners
       url: /books/mal-winter-and-the-cloud-runners/
+
     - title: Mal Winter and the Last Titan
       url: /books/mal-winter-and-the-last-titan/
 

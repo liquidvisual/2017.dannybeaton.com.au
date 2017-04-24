@@ -1,7 +1,7 @@
 /*
     VARIABLES.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 24.04.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -9,18 +9,23 @@
 //-----------------------------------------------------------------
 
 $fa-font-path: "/assets/fonts";
-$header-sm-height: 60px; // optimal
-$header-md-height: 130px;
-$header-lg-height: 180px;
+
+//-----------------------------------------------------------------
+// HEADER HEIGHT
+//-----------------------------------------------------------------
+
+$header-sm-height: 60px;
+$header-md-height: 60px;
+$header-lg-height: 60px;
 
 //-----------------------------------------------------------------
 // HERO HEIGHT
 //-----------------------------------------------------------------
 
-$hero-sm-height:          auto;
-$hero-md-height:          rem-calc(460); // [LOCKED]
-$hero-lg-height:          rem-calc(500); // [LOCKED]
-$hero-xl-height:          rem-calc(600); // 740 [LOCKED]
+$hero-sm-height: auto;
+$hero-md-height: rem-calc(560);
+$hero-lg-height: rem-calc(620);
+$hero-xl-height: rem-calc(620);
 
 //=========================================
 //

@@ -10,7 +10,7 @@
 
 $header-sm-height: 60px !default; // optimal
 $header-md-height: 60px !default;
-$header-lg-height: auto;// !default;
+$header-lg-height: 60px !default;
 
 //-----------------------------------------------------------------
 // HEADROOM
@@ -39,14 +39,15 @@ $header-lg-height: auto;// !default;
 	width: 100%;
 	z-index: 999;
 
-	@include media-breakpoint-up(lg) {
-	    margin-top: 20px;
+	@include media-breakpoint-down(sm) {
+	    background: rgba(white, 0.8);
+	    box-shadow: 0 0 3px 1px rgba(black, 0.2);
+	    -webkit-backdrop-filter: blur(5px);
+	    backdrop-filter: blur(5px);
 	}
 
-	@include media-breakpoint-down(sm) {
-		// position: fixed;
-	    background: white;
-	    box-shadow: 0 0 3px 1px rgba(black, 0.2);
+	@include media-breakpoint-up(md) {
+	    top: 25px; // looks right
 	}
 
 	//=========================================
@@ -55,85 +56,63 @@ $header-lg-height: auto;// !default;
 
 	> .container {
 		display: flex;
-		position: relative; // need?
 		height: $header-sm-height;
-		// transition: height 100ms ease;
-
-		@include media-breakpoint-up(md) {
-		    // height: $header-md-height;
-		}
-
-		@include media-breakpoint-up(lg) {
-			// height: $header-lg-height;
-
-			height: 55px; // tweak?
-		}
 	}
 }
-
-//-----------------------------------------------------------------
-// HEADER STRIP
-//-----------------------------------------------------------------
-/*
-.global-header-bg {
-	// width: 100%;
-	display: flex;
-	// justify-content: center;
-	// justify-content: flex-end;
-	// padding-left: 130px;
-
-	@include media-breakpoint-up(lg) {
-	    background: $brand-quaternary;
-		border-top: 10px solid $brand-tertiary;
-
-		border-top: 4px solid $brand-tertiary;
-
-		// border: 2px solid $brand-tertiary;
-		// box-shadow: 0 1px 5px 0px rgba(black, 0.5);
-		box-shadow: 0 0 0px 5px rgba(black, 0.2);
-	    // border-radius: 100px 0 10px 100px;
-
-	    border-radius: 0 0 10px 10px;
-	    // border-radius: 5px;
-
-	    // margin-left: 20px;
-	}
-}
-*/
 
 //-----------------------------------------------------------------
 // LOGO
 //-----------------------------------------------------------------
 
 .global-header .logo {
+	display: flex;
+	align-items: center;
 	position: relative;
-	top: -8px;
-	height: 100%;
+	height: 100%; // need
+
+	@include media-breakpoint-down(sm) {
+	    width: 100%;
+	    justify-content: center;
+	    text-align: center;
+	}
+
+	//=========================================
+	// LOGO IMAGE
+	//=========================================
+
+	img {
+		position: relative;
+		height: calc(100% - 15px);
+		width: auto;
+		margin-right: 10px;
+		transition: all 300ms ease;
+
+		@include media-breakpoint-down(sm) {
+		    left: 20px; // offset for centered logo on mobile
+		}
+
+		@include media-breakpoint-up(md) {
+		    height: 100%;
+		    margin-right: 15px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			height: calc(100% + 16px);
+		}
+	}
+
+	//=========================================
+	// LOGO TEXT
+	//=========================================
 
 	.text {
 		font-family: $font-family-sans-serif;
-		font-family: lato;
 		font-size: rem-calc(20);
-		// font-weight: 700;
-		// text-shadow: 1px 2px 2px rgba(black, 0.2);
-		color: white;
+		font-weight: 700;
+		// color: white;
+		color: #222;
+		// text-shadow: 0px 1px 2px rgba(black, 0.08);
 		text-transform: uppercase;
-	}
-
-	img {
-		// width: 75px;
-		transition: all 300ms ease;
-		margin-right: 15px;
-
-		@include media-breakpoint-up(md) {
-			// width: 150px;
-		}
-
-		@include media-breakpoint-up(xl) {
-			height: calc(100% + 16px);
-			width: auto;
-			// width: 130px;
-		}
 	}
 }
 
@@ -145,7 +124,7 @@ $header-lg-height: auto;// !default;
 	margin: auto 0 auto auto;
 
 	@include media-breakpoint-up(md) {
-	    margin: 30px 0 auto auto;
+		margin: 10px 0 auto auto;
 	}
 }
 

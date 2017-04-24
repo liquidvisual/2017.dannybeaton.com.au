@@ -11,21 +11,24 @@
 // VARIABLES
 //-----------------------------------------------------------------
 
-$hero-sm-height:              auto          !default; // default: auto // IMPORTANT: if carousel slides, you need a fixed height
-$hero-md-height:              rem-calc(575) !default;
-$hero-md-height-fixed:        rem-calc(575) !default;
-$hero-lg-height:              rem-calc(600) !default;
-$hero-xl-height:              rem-calc(600) !default;
-$cloud-speed:                 10 !default;
+$cloud-speed:              10 !default;
+
+$hero-sm-height:           auto          !default; // default: auto // IMPORTANT: if carousel slides, you need a fixed height
+$hero-md-height:           rem-calc(575) !default;
+$hero-lg-height:           rem-calc(600) !default;
+$hero-xl-height:           rem-calc(600) !default;
+
+$hero-sm-height-preset-1:  auto          !default;
+$hero-md-height-preset-1:  rem-calc(600) !default;
+$hero-lg-height-preset-1:  rem-calc(600) !default;
 
 //-----------------------------------------------------------------
 // HERO WRAPPER
-//
-// Used to align the controls relative to the container
 //-----------------------------------------------------------------
 
 .lv-hero-wrapper {
     position: relative;
+    overflow: hidden; // savior
 
     @include media-breakpoint-up(md) {
         position: fixed;
@@ -35,10 +38,65 @@ $cloud-speed:                 10 !default;
 }
 
 //-----------------------------------------------------------------
+// HERO
+//-----------------------------------------------------------------
+
+.lv-hero {
+    // width: 100%; // added last minute - breaking?
+    height: $hero-sm-height;
+    overflow: hidden; // causes problems without JS
+
+    @include media-breakpoint-down(sm) {
+        padding-top: $header-sm-height;
+    }
+
+    @include media-breakpoint-up(md) {
+        height: $hero-md-height;
+    }
+
+    @include media-breakpoint-up(lg) {
+       height: $hero-lg-height;
+    }
+
+    @include media-breakpoint-up(xl) {
+       height: $hero-xl-height;
+    }
+
+    //=========================================
+    // HAS HEIGHT PRESET 1
+    //=========================================
+
+    &.has-height-preset-1 {
+        height: $hero-sm-height-preset-1;
+
+        @include media-breakpoint-up(md) { // added - refactor
+           height: $hero-md-height-preset-1;
+        }
+
+        @include media-breakpoint-up(lg) {
+           height: $hero-lg-height-preset-1;
+        }
+    }
+}
+
+//-----------------------------------------------------------------
+// HERO ITEM (SLIDES)
+//-----------------------------------------------------------------
+
+.lv-hero-item {
+    display: flex;
+    align-items: flex-end;
+    // float: left;
+    width: 100%; // need
+    height: 100%;
+    background-color: $brand-primary;
+    background-repeat: no-repeat; // incase future BG image
+    background-position: center center;
+    background-size: cover;
+}
+
+//-----------------------------------------------------------------
 // CLOUDS SCROLLING ANIMATION
-//
-// from { background-position: 0 0; }
-// to { background-position: 100% 0; }
 //-----------------------------------------------------------------
 
 @keyframes hero-layer-1-scroller {
@@ -65,7 +123,7 @@ $cloud-speed:                 10 !default;
         left: 0;
         width: 2820px * $cloud-speed;
         height: 100%;
-        background-size: 2820px;
+        background-size: 2820px; // [LOCKED]
         background-repeat: repeat-x;
         background-position: bottom;
         animation: hero-layer-1-scroller #{300*$cloud-speed}s linear infinite;
@@ -73,97 +131,6 @@ $cloud-speed:                 10 !default;
 
     .bg-layer-2 {
         animation: hero-layer-2-scroller #{300*$cloud-speed/2}s linear infinite;
-    }
-}
-
-//-----------------------------------------------------------------
-// HERO
-//
-// By design, mobile defaults to 'auto'
-//-----------------------------------------------------------------
-
-.lv-hero {
-    width: 100%; // added last minute - breaking?
-    overflow: hidden; // causes problems without JS
-    height: $hero-sm-height;
-
-    @include media-breakpoint-up(md) {
-        height: $hero-md-height;
-    }
-
-    @include media-breakpoint-up(lg) {
-       height: $hero-lg-height;
-    }
-
-    @include media-breakpoint-up(xl) {
-       height: $hero-xl-height;
-    }
-
-    //=========================================
-    // Has Auto Height
-    //
-    // * Will override above at all sizes
-    // * Height determined by inner caption
-    //=========================================
-
-    &.has-auto-height {
-        height: auto;
-    }
-    //=========================================
-    // Has Fixed Height
-    //
-    // * Used on internal pages to set a height
-    //=========================================
-
-    &.has-fixed-height {
-        height: rem-calc(150); // case by case
-        background-position: center center;
-
-        @include media-breakpoint-up(md) { // added - refactor
-           height: rem-calc(300);
-        }
-
-        @include media-breakpoint-up(xl) {
-           height: $hero-md-height-fixed;
-        }
-    }
-}
-
-//-----------------------------------------------------------------
-// HERO ITEM (Slides)
-//-----------------------------------------------------------------
-
-.lv-hero-item {
-    display: flex;
-    // align-items: center;
-    // float: left;
-    width: 100%; // need
-    height: 100%;
-    background-color: $brand-primary;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    // animation: hero-bg-scroller 300s linear infinite;
-}
-
-//-----------------------------------------------------------------
-// HOME UNIQUE
-//-----------------------------------------------------------------
-
-.lv-hero-item-caption {
-    position: relative;
-
-    @include media-breakpoint-up(md) {
-        top: 40px;
-    }
-
-    @include media-breakpoint-up(xl) {
-        top: 60px;
-    }
-
-    // Mobile
-    @include media-breakpoint-down(sm) {
-        padding: rem-calc(40 20 20 20);
     }
 }
 
@@ -188,3 +155,27 @@ $cloud-speed:                 10 !default;
         }
     }
 }
+
+//-----------------------------------------------------------------
+// HOME UNIQUE
+//-----------------------------------------------------------------
+
+.lv-hero-item-caption {
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+        padding: rem-calc(40 20 0 20);
+    }
+
+    @include media-breakpoint-up(md) {
+        top: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        top: 60px;
+    }
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------

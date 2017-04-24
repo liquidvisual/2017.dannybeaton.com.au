@@ -4,8 +4,7 @@
     - updated: 06.03.17
     - notes:
         * Multiple items in carousel_slides.yml triggers carousel mode
-        * .has-auto-height - caption will detemine height
-        * .has-fixed-height - used for internal pages to set a height
+        * .has-height-preset-1 - used for internal pages to set a height
 {% endcomment %}
 
 <div class="lv-hero-wrapper">
@@ -14,10 +13,10 @@
     <div class="lv-hero">
 
         <!-- HERO ITEM -->
-        <div class="lv-hero-item align-items-end">
+        <div class="lv-hero-item">
 
             <!-- PARALLAX BG -->
-            <div class="bg-layers layer" data-depth="0.3">
+            <div class="bg-layers">
                 <div class="bg-layer-1" style="background-image: url(/assets/img/layout/clouds-layer-1.jpg)"></div>
                 <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
             </div>
@@ -28,9 +27,7 @@
 
                         <!-- HERO CAPTION -->
                         <div class="lv-hero-item-caption">
-                            <img width="100%" src="/assets/img/content/hero-mal-text@2x.png" alt="Mal Winter and the Cloud Runners - Available Now">
-                            <br>
-                            <br>
+                            <p class="mb-4"><img width="100%" src="/assets/img/content/hero-mal-text@2x.png" alt="Mal Winter and the Cloud Runners - Available Now"></p>
                             <a class="btn btn-primary hidden-sm-down" href="#moooore"><i class="fa fa-hand-o-right"></i>&nbsp; Learn more</a>
                         </div>
 
@@ -38,7 +35,7 @@
                     <div class="col-md-8 pull-md-4 text-center">
 
                         <!-- SUPPORTING IMAGE -->
-                        <img width="100%" class="lv-hero-character layer" data-depth="0.5" src="/assets/img/content/hero-mal@2x.png" alt="Mal Winter and the Cloud Runners, Pre-order today">
+                        <img width="100%" class="lv-hero-character" src="/assets/img/content/hero-mal@2x.png" alt="Mal Winter and the Cloud Runners, Pre-order today">
 
                     </div>
                 </div> <!-- /.row -->
