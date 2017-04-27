@@ -12,21 +12,31 @@
 //-----------------------------------------------------------------
 
 .btn {
-	font-family: $font-family-sans-serif;
+	// font-family: $font-family-sans-serif;
+	font-family: 'Roboto Slab';
+	outline: none !important;
+}
+
+html .btn {
+    outline-color: red !important;
 }
 
 //-----------------------------------------------------------------
 // PRIMARY
 //-----------------------------------------------------------------
 
-.lv-page .btn-primary,
-.lv-page .btn-secondary {
-	font-size: rem-calc(22);
+.btn-primary,
+.btn-secondary {
+	// font-size: rem-calc(22); // previous font choice
+	// line-height: 1.4;
 	line-height: 1.4;
+	font-size: rem-calc(19);
 	padding: rem-calc(10 25 7 25);
 	border: 0; // reset
 	border-bottom: 3px solid darken($brand-secondary, 15%);
 	box-shadow: 0 1px 2px 0px rgba(black, 0.2);
+	cursor: pointer; // for some reason isn't default on <button>
+	transition: background-color 200ms ease;
 
 	&:hover {
 		background: lighten($brand-secondary, 5%);
@@ -36,9 +46,9 @@
 		position: relative;
 		top: 1px;
 		background: lighten($brand-secondary, 2%);
-		border-bottom: 3px solid transparent;
+		// border-bottom: 3px solid transparent;
+		border-width: 2px;
 		box-shadow: none;
-		transition: background-color 50ms linear;
 	}
 }
 
@@ -46,26 +56,24 @@
 // SECONDARY
 //-----------------------------------------------------------------
 
-.lv-page .btn-secondary {
+.btn-secondary {
 	border: 2px solid $brand-secondary;
 	background: none;
 	color: $brand-secondary;
 	box-shadow: none;
-	transition: none;
+	transition: background-color 100ms ease, border-color 100ms ease;
 
 	&:hover {
-		background: rgba(black, 0.2);
-		border: 2px solid transparent;////rgba(black, 0.15); //lighten($brand-secondary, 5%);
+		background: #222;
+		border-color: #222;
 		color: white;
 	}
 
 	&:active {
-		position: relative;
-		top: 1px;
-		background: lighten($brand-secondary, 2%);
-		border-bottom: 3px solid transparent;
+		top: 0;
+		background: lighten(#222, 15%);
+		border-color: lighten(#222, 15%);
 		box-shadow: none;
-		transition: background-color 50ms linear;
 	}
 }
 

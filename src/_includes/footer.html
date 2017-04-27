@@ -4,22 +4,46 @@
 <section class="global-footer-top">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h3>About Danny</h3>
-                <p>Welcome to the home of new Australian author Danny Beaton. Please take the time to look around and discover more about the writer and his current and future books.</p>
-            </div>
-            <div class="col-md-4">
-                <h3>Recent Posts</h3>
-                <ul class="list-unstyled">
-                    {% for item in site.data.lorem_ipsum | limit: 4 %}
-                        <li><a href="#">{{ item.title }}</a></li>
-                    {% endfor %}
+            <div class="col-md-6 col-lg-7 col-xl-8">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
 
-                </ul>
+                        <!-- GET IN TOUCH -->
+                        <h3>Get in Touch</h3>
+                        <p>Welcome to the home of new Australian author Danny Beaton. Please take the time to look around and discover more about the writer and his current and future books.</p>
+
+                        <!-- SOCIAL MEDIA -->
+                        <ul class="social-media mb-4">
+                            <li><a class="facebook" href="{{ settings.facebook }}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="{{ settings.instagram }}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="instagram" href="{{ settings.instagram }}"><i class="fa fa-instagram"></i></a></li>
+                            <li><a class="youtube" href="{{ settings.instagram }}"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-md-6 hidden-md-down">
+
+                        <!-- RECENT POSTS -->
+                        <h3>Recent Posts</h3>
+                        <ul class="list-unstyled mb-2">
+                            {% for item in site.data.lorem_ipsum | limit: 4 %}
+                                <li><a href="#">{{ item.title | truncate: 60 }}</a></li>
+                            {% endfor %}
+                        </ul>
+
+                        <!-- READ MORE -->
+                        <p class="text-right"><a class="anchor-link" href="#">Read more <i class="fa fa-angle-right"></i></a></p>
+
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h3>Sign up for the Newsletter</h3>
+            <div class="col-md-6 col-lg-5 col-xl-4">
+
+                <!-- JOIN THE MAILING LIST -->
+                <h3>Join the Mailing List</h3>
+                <p>Enter your email address to receive occasional updates on Danny, his books, and other projects.</p>
                 {% include form_subscribe.html %}
+
             </div>
         </div>
     </div>
@@ -29,17 +53,17 @@
 <section class="global-footer-bottom">
     <div class="container">
 
+        <!-- COPYRIGHT -->
 		<small>&copy; <b>{{ site.time | date: '%Y' }}</b> - Danny Beaton</small>
-
         <a class="author-logo" target="_blank" href="{{ settings.author.url }}">
             <small class="float-right">
                 <img style="opacity: 0.3;" width="18" height="18" src="{{ settings.author.logo }}" alt="Created by {{ settings.author.title }}">
-            	&nbsp;made by
+            	&nbsp;site by
                 <span class="text">{{ settings.author.description }}</span>
             </small>
         </a>
 
+        <!-- BACK TO TOP -->
         <a class="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
-
     </div>
 </section>

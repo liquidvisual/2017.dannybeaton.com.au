@@ -1,54 +1,33 @@
 {% assign settings = site.data.settings %}
 
 <!-- IF SUCCESS -->
-<div class="alert alert-success" hidden>
-    <h4>Success!</h4>
-    <p>Your form has been submitted.</p>
-</div>
-
-<!-- IF FAILURE -->
-<div class="alert alert-danger alert-dismissible fade in" role="alert" hidden>
+<div class="alert alert-success alert-dismissible fade show" role="alert" hidden>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <h4>Oops!</h4>
-    <p>Something went wrong. Please check your details.</p>
+    <strong>Success!</strong> Thanks for that. Your email has been added to the mailing list.
 </div>
 
+<!-- IF FAILURE -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Oops!</strong> Something went wrong. Please check your details and try again.
+</div>
+
+<!-- FORM SUBSCRIBE -->
 <form data-toggle="validator">
     <fieldset>
         <div class="row">
-            <div class="col-12">
-                <!-- NAME -->
-                <div class="form-group">
-                    <label for="name"><i class="fa fa-user"></i> Name (required)</label>
-                    <input class="form-control" id="name" name="Name" type="text" placeholder="" required>
-                    <small class="error">Your name is required.</small>
+            <div class="col">
+                <div class="input-group form-group">
+                    <input  class="form-control" id="email" name="Email" type="text" placeholder="Enter Your Email" required>
+                    <button class="btn btn-primary" type="button">Send</button>
+                    <i class="fa fa-envelope"></i>
                 </div>
-            </div>
-            <div class="col-12">
-                <!-- EMAIL -->
-
-
-                <!-- <div class="form-group">
-                    <label for="email"><i class="fa fa-envelope"></i> Email (required)</label>
-                    <input class="form-control" id="email" name="Email" type="email" placeholder="" required>
-                    <small class="error">A valid email is required.</small>
-                </div> -->
+                <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
             </div>
         </div>
-
-        <!-- SUBMIT -->
-        <!-- <button type="submit" class="btn btn-primary float-right">Sure, why not.</button> -->
-
     </fieldset>
-</form>
-
-<form class="form-inline">
-
-  <div class="form-group mx-sm-3">
-    <label for="inputPassword2" class="sr-only">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary">Confirm identity</button>
 </form>

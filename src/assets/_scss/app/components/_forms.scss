@@ -26,19 +26,26 @@ textarea {
 
 form[data-toggle="validator"] .error {
 	display: none;
-	width: 100%;
+	// width: 100%;
 	padding: rem-calc(5 10);
 	background: $brand-danger;
 	color: white;
+	border-radius: 3px;
 }
 
-form[data-toggle="validator"] .has-error > .form-control {
+.input-group.has-error {
+	margin-bottom: 10px;
+}
+
+form[data-toggle="validator"] .has-error > .form-control:not(.input-group .form-control) {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-form[data-toggle="validator"] .has-error > .error {
-	display: block;
+form[data-toggle="validator"] .has-error > .error,
+form[data-toggle="validator"] .has-error + .error {
+	// display: block;
+	display: inline-block;
 }
 
 //-----------------------------------------------------------------

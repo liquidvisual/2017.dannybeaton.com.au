@@ -18,15 +18,61 @@ $header-lg-height: 60px !default;
 
 .headroom {
     will-change: transform;
-    transition: transform 200ms linear;
+    transition: transform 200ms linear, background-color 200ms ease;
 }
 
 .headroom--pinned {
-	transform: translateY(0%);
+    // @include media-breakpoint-down(sm) {
+        transform: translateY(0%);
+    // }
+}
+.headroom--unpinned {
+	// @include media-breakpoint-down(sm) {
+    	transform: translateY(-110%);
+	// }
 }
 
-.headroom--unpinned {
-    transform: translateY(-105%);
+//**********************************************
+// STYLING SCROLL HEADER
+//**********************************************
+
+.headroom--top {
+	background: none; // Need for animation
+}
+
+.headroom--not-top.headroom--pinned.global-header {
+	@include media-breakpoint-up(md) {
+		// position: fixed;
+	    background: rgba(white, 1);
+	    // -webkit-backdrop-filter: blur(5px);
+	    padding: 5px 0;
+	    // border-top: 3px solid $brand-tertiary;
+	    // box-shadow: 0 0 3px 1px rgba(black, 0.2);
+	    box-shadow: 0 0 0px 4px rgba(black, 0.2);
+
+	    .lv-topbar {
+	    	background: none;
+	    	box-shadow: none;
+
+	    	.top-parent-anchor {
+	    		// color: white;
+	    	}
+	    }
+
+	    > .container {
+	    	height: $header-md-height;
+	    }
+
+	    .logo {
+	    	img {
+	    		height: calc(100% - 10px);
+	    	}
+
+	    	.text {
+	    		font-size: rem-calc(16);
+	    	}
+	    }
+	}
 }
 
 //-----------------------------------------------------------------
@@ -47,7 +93,7 @@ $header-lg-height: 60px !default;
 	}
 
 	@include media-breakpoint-up(md) {
-	    top: 25px; // looks right
+	    padding-top: 25px; // create gap - looks right
 	}
 
 	//=========================================
@@ -85,7 +131,7 @@ $header-lg-height: 60px !default;
 		height: calc(100% - 15px);
 		width: auto;
 		margin-right: 10px;
-		transition: all 300ms ease;
+		// transition: all 300ms ease;
 
 		@include media-breakpoint-down(sm) {
 		    left: 20px; // offset for centered logo on mobile

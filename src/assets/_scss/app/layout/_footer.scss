@@ -1,7 +1,7 @@
 /*
     FOOTER.CSS
 
-    - Last updated: 00.00.00
+    - Last updated: 25.04.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -18,6 +18,14 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: white;
+		font-family: "Roboto Slab"; //$font-family-sans-serif;
+		font-weight: 400;
+	}
+
+	h3 {
+		@include media-breakpoint-up(md) {
+		    font-size: rem-calc(24);
+		}
 	}
 
 	a {
@@ -26,15 +34,36 @@
 }
 
 //-----------------------------------------------------------------
-// FOOTER
+// FOOTER TOP
 //-----------------------------------------------------------------
 
 .global-footer-top {
-	padding: $spacer-y * 2;
+	padding: $spacer-y * 2 0;
 	background: darken($brand-quinary, 15%) url(/assets/img/layout/grain3@2x.png);
 	background-size: 100px;
 
-	ul li {
+	//=========================================
+	// HEADERS
+	//=========================================
+
+	h3 i {
+		color: rgba(white, 0.3);
+		font-size: rem-calc(25);
+	}
+
+	//=========================================
+	// TYPE
+	//=========================================
+
+	p {
+		font-size: rem-calc(16);
+	}
+
+	//=========================================
+	// LISTS
+	//=========================================
+
+	ul.list-unstyled li {
 		font-size: rem-calc(16);
 		border-bottom: 1px solid rgba(black, 0.2);
 
@@ -43,24 +72,46 @@
 			padding: rem-calc(10 0);
 		}
 	}
+
+	//=========================================
+	// NEWSLETTER
+	//=========================================
+
 	form {
+		.form-group,
+		.input-group {
+			position: relative;
+
+			i {
+				position: absolute;
+				top: rem-calc(14);
+				left: 15px;
+				color: rgba(black, 0.3);
+				// line-height: 0;
+				font-size: rem-calc(20);
+			}
+		}
+
 		input {
-			padding-left: 40px;
+			padding-left: rem-calc(46);
 			background: rgba(darken($brand-quinary, 30%), 0.5);
-			background-size: 100px;
 			border: 0;
 		}
-		i {
-			position: absolute;
-			top: 48px;
-			left: 32px;
-			color: rgba(black, 0.3);
+
+		button {
+			border-radius: 0 $border-radius $border-radius 0 !important;
+			cursor: pointer;
 		}
+
+		::-webkit-input-placeholder { color: rgba($brand-quaternary, 0.5); }
+		::-moz-placeholder          { color: rgba($brand-quaternary, 0.5); }
+		:-ms-input-placeholder      { color: rgba($brand-quaternary, 0.5); }
+		:-moz-placeholder           { color: rgba($brand-quaternary, 0.5); }
 	}
 }
 
 //-----------------------------------------------------------------
-// FOOTER
+// FOOTER BOTTOM
 //-----------------------------------------------------------------
 
 .global-footer-bottom {
@@ -68,8 +119,24 @@
 	padding: rem-calc(15 0);
 	background: darken($brand-quinary, 20%) url(/assets/img/layout/grain3@2x.png);
 	background-size: 100px;
-	// background: #3c4043;
 	color: $brand-quaternary;
+
+	//=========================================
+	// BLEED TO BOTTOM
+	//=========================================
+
+	&:after {
+		content: "";
+		position: fixed;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: inherit;
+	}
+
+	//=========================================
+	// ANCHORS
+	//=========================================
 
 	a {
 		color: $brand-tertiary;
@@ -85,6 +152,7 @@
 //-----------------------------------------------------------------
 
 .back-to-top {
+	display: none;
 	position: absolute;
 	top: 5px;
 	right: -60px;
