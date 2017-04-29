@@ -1,7 +1,7 @@
 /*
     FORMS.CSS
 
-    - Last updated: 06.10.16
+    - Last updated: 28.04.17
     - liquidvisual.com
 */
 //-----------------------------------------------------------------
@@ -28,19 +28,24 @@ form[data-toggle="validator"] .error {
 	display: none;
 	// width: 100%;
 	padding: rem-calc(5 10);
+	border-radius: 3px;
 	background: $brand-danger;
 	color: white;
-	border-radius: 3px;
 }
 
-.input-group.has-error {
-	margin-bottom: 10px;
+form[data-toggle="validator"] .has-error .form-control,
+form[data-toggle="validator"] .has-error.input-group {
+	margin-bottom: rem-calc(10);
 }
 
-form[data-toggle="validator"] .has-error > .form-control:not(.input-group .form-control) {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
+form[data-toggle="validator"] .has-error.input-group .form-control {
+	margin-bottom: 0;
 }
+
+// form[data-toggle="validator"] .has-error > .form-control:not(.input-group.form-control) {
+// 	border-bottom-left-radius: 0;
+// 	border-bottom-right-radius: 0;
+// }
 
 form[data-toggle="validator"] .has-error > .error,
 form[data-toggle="validator"] .has-error + .error {

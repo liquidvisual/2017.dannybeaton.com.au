@@ -3,27 +3,62 @@ layout: base
 ---
 
 {% assign hero = page.hero | default: "/assets/img/content/hero-1.png" %}
+{% assign hero_image = page.hero_image %}
+{% assign hero_image_caption = page.hero_image_caption %}
+{% assign hero_image_caption_title = page.hero_image_caption_title %}
 
-{% include hero.html %}
+<div class="lv-hero-wrapper">
 
-<!-- MAIN CONTENT -->
-<main class="main-content-container">
+    <!-- HERO -->
+    <div class="lv-hero">
+
+        <!-- HERO ITEM -->
+        <div class="lv-hero-item">
+
+            <!-- PARALLAX BG -->
+            <div class="bg-layers">
+                <div class="bg-layer-1" style="background-image: url(/assets/img/layout/clouds-layer-1.jpg)"></div>
+                <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 push-md-8 text-center">
+
+                        <!-- HERO CAPTION -->
+                        <div class="lv-hero-item-caption">
+
+                            {% if hero_image_caption %}
+
+                                <p class="mb-4"><img width="100%" src="{{ hero_image_caption }}" alt="{{ hero_image_caption_title }}"></p>
+                                <!-- <a class="btn btn-primary hidden-sm-down" href="#moooore"><i class="fa fa-hand-o-right"></i>&nbsp; Learn more</a> -->
+
+                            {% else %}
+
+                                <h1>{{ page.title }}</h1>
+
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-8 pull-md-4 text-center">
+
+                        <!-- SUPPORTING IMAGE -->
+                        <img width="100%" class="lv-hero-character" src="{{ page.hero_image }}" alt="Book Character">
+
+                    </div>
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.lv-hero-item -->
+    </div> <!-- /.lv-hero -->
+</div> <!-- /.lv-hero-wrapper -->
+
+<!-- CONTENT -->
+<main class="page-content-container">
     <div class="container">
-        <div class="main-content">
-
+        <div class="page-content">
             {{ content }}
-
-            {% comment %}
-            {% for i in (1..1)  %}
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            {% endfor %}
-            {% endcomment %}
-
         </div>
     </div>
 </main>

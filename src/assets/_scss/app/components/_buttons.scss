@@ -14,11 +14,6 @@
 .btn {
 	// font-family: $font-family-sans-serif;
 	font-family: 'Roboto Slab';
-	outline: none !important;
-}
-
-html .btn {
-    outline-color: red !important;
 }
 
 //-----------------------------------------------------------------
@@ -29,7 +24,7 @@ html .btn {
 .btn-secondary {
 	// font-size: rem-calc(22); // previous font choice
 	// line-height: 1.4;
-	line-height: 1.4;
+	line-height: 26px; // force
 	font-size: rem-calc(19);
 	padding: rem-calc(10 25 7 25);
 	border: 0; // reset
@@ -37,6 +32,12 @@ html .btn {
 	box-shadow: 0 1px 2px 0px rgba(black, 0.2);
 	cursor: pointer; // for some reason isn't default on <button>
 	transition: background-color 200ms ease;
+
+	&:focus {
+		box-shadow: none;
+		color: rgba(white, 0.5);
+		box-shadow: 0 1px 2px 0px rgba(black, 0.2);
+	}
 
 	&:hover {
 		background: lighten($brand-secondary, 5%);

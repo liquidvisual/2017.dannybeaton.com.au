@@ -5,92 +5,82 @@ layout: base
 {% assign settings = site.data.settings %}
 {% assign featured = site.data.sitemap[3].children | where: "featured", true %}
 
+{% include hero.html %}
 
-<div class="container">
-{% for i in (1..1) %}
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-{% endfor %}
+<!-- CONTENT -->
+<main class="page-content-container">
+    <div class="container">
+        <div class="page-content">
 
+			<!-- MAIN CLAIM -->
+   			<section class="section">
+   				<div class="container">
+   					<div class="row justify-content-md-center">
+   						<div class="col-md-9 text-center">
 
-<button class="btn btn-primary" type="button">Send</button>
-<button class="btn btn-secondary" type="button">Send</button>
+   							<!-- HEADLINE -->
+   							<h1>An Exciting New Adventure Book for Children</h1>
+   							<p class="lead">"The night he watched his father die, Mal learned of the dark creatures who lurk in dreams, hungry for sleeping souls. Mal Winter, a young would-be hero, must traverse the dreamscape to learn the legacy of the Cloud Runners. He'll need to fight his greatest demons to save his family and friends from the unimaginable."</p>
 
-<a href="#" class="btn btn-primary">Anchor</a>
-<a href="#" class="btn btn-secondary">Anchor</a>
+							<div class="spacer my-4"></div>
 
-</div>
+   							<!--  TESTIMONIALS -->
+   							<h3 class="mb-3">Kids Are Saying...</h3>
+   							<ul class="block-grid-md-3 list-blockquotes">
+   								<li><blockquote><p>"Perfect. Wouldn't change anything. I want to read the next one."</p><cite>Bailey, Age 9</cite></blockquote></li>
+   								<li><blockquote><p>"I really liked it and it was fun and full of mystery and didn't know what was going to happen."</p><cite>Anne, Age 12</cite></blockquote></li>
+   								<li><blockquote><p>"Fantastic storyline. I'm sure others would love to read it too. Great story.</p><cite>David, Age 10</cite></blockquote></li>
+   							</ul>
+   						</div>
+   					</div>
+   				</div>
+   			</section>
 
-{% comment %}
-<section>
-	<div class="container py-5">
-		<div class="row justify-content-md-center">
-			<div class="col-md-9 text-center">
+			<!-- FEATURED BOOK -->
+			<section class="section section-book-feature section-bleed">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
 
-				<!-- AN EXCITING BOOK FOR KIDS -->
+							<!-- MAL WINTER AND THE CLOUD RUNNERS -->
+							<h2>Mal Winter and the Cloud Runners</h2>
+							<h3>Now Available for Purchase</h3>
+							<p>After several years of hard work and imagination - Danny has written his first novel; the first in a planned series of children's books that will take readers to another world. It's a lively coming-of-age tale that deals with a young boy's struggle to become a hero.</p>
 
-				<h1>An Exciting New Adventure Book for Children</h1>
-				<p class="lead">"The night he watched his father die, Mal learned of the dark creatures that lurk in dreams, hungry for sleeping souls. Mal Winter, a young would-be hero, must traverse dreamscapes to learn the legacy of the Cloud Runners. He'll need to fight his greatest demons to save his family and friends from the unimaginable."</p>
+							<!-- ACTION BUTTONS -->
+							<p class="mb-4">
+								<a class="btn btn-primary mb-3" href="/store/"><i class="fa fa-shopping-cart"></i>&nbsp; Purchase now</a> &nbsp;&nbsp;
+								<a class="btn btn-secondary mb-3" href="#newsletter-modal"><i class="fa fa-download"></i>&nbsp; Read free chapter</a>
+							</p>
 
-				<div class="spacer mb-3"></div>
+						</div>
+						<div class="col-md-4 ">
 
-				<!--  WHAT THEY'RE SAYING -->
+							<!-- GIANT BOOK -->
+							<span class="book">
+								<img width="100%" src="/assets/img/content/book-1.png" alt="Mal Winter and the Cloud Runners">
+								<a href="/store/" class="btn-price-sticker"><span class="dollar-sign">$</span>3</a>
+							</span>
 
-				<h3 class="mb-3">Kids Are Saying...</h3>
+						</div>
+					</div>
+				</div>
+			</section>
 
-				<ul class="block-grid-md-3 list-blockquotes">
-					<li><blockquote><p>"Perfect. Wouldn't change anything. I want to read the next one."</p><cite>Bailey, Age 9</cite></blockquote></li>
-					<li><blockquote><p>"I really liked it and it was fun and full of mystery and didn't know what was going to happen."</p><cite>Anne, Age 12</cite></blockquote></li>
-					<li><blockquote><p>"Fantastic storyline. I'm sure others would love to read it too. Great story.</p><cite>David, Age 10</cite></blockquote></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
+			<!-- ABOUT DANNY -->
+			<section class="section section-bio">
+				<div class="container m-auto">
+					<div class="row">
+						<div class="col-md-6 offset-md-5 text-center">
+							<h2>Danny is an Author &amp; Illustrator from Sydney</h2>
+							<p>Danny has written movies, short stories and even a poem or two, but the crowning jewel in his body of work is his latest book, <a href="#">Mal Winter and the Cloud Runners.</a></p>
+							<p>Danny values creativity and strives to bring this out in others. He is currently touring schools in Victoria, Australia with his creative workshop that promotes reading and creative writing.</p>
+							<p><a href="/about/" class="btn btn-primary"><i class="fa fa-hand-o-right"></i>&nbsp; Learn more</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-<section class="jumbotron jumbotron-fluid mb-0 section-book-feature section-bleed">
-	<div class="container" style="max-width: 900px;">
-		<div class="row">
-			<div class="col-md-8">
-
-				<h2>Mal Winter and the Cloud Runners</h2>
-				<h3>Now Available for Purchase</h3>
-				<p>After several years of hard work and imagination - Danny has written his first novel; the first in a planned series of children's books that will take readers to another world. It's a lively coming-of-age tale that deals with a young boy's struggle to become a hero.</p>
-				<p>
-					<a href="#sxsx" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>&nbsp; Purchase now</a> &nbsp;&nbsp;
-					<a href="dw" class="btn btn-secondary"><i class="fa fa-download"></i>&nbsp; Read free chapter</a>
-				</p>
-				<div class="spacer m-b-2"></div>
-
-			</div>
-			<div class="col-md-4 ">
-				<span class="book">
-					<img width="100%" alt="Mal Winter and the Cloud Runners" src="/assets/img/content/book-1.png">
-					<a href="#ddd" class="btn-price-sticker"><span class="dollar-sign">$</span>3</a>
-				</span>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- ABOUT DANNY -->
-<section class="py-3 section-bio">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 offset-md-4 text-xs-center">
-				<h2>Danny is an Author / Illustrator</h2>
-				<p>Danny has written movies, short stories and even a poem or two, but the crowning jewel in his body of work is his latest book, <a href="#">Mal Winter and the Cloud Runners.</a></p>
-				<p>Danny values creativity and strives to bring this out in others. He is currently touring schools in Victoria, Australia with his creative workshop that promotes reading and creative writing.</p>
-				<p><a href="" class="btn btn-primary">Learn more</a></p>
-			</div>
-<!-- 			<div class="col-md-3">
-				<img class="img-round" width="200" src="http://dannybeaton.com.au/img/content/danny-avatar.jpg" alt="Danny Beaton Photo">
-			</div> -->
-		</div>
-	</div>
-</section>
-{% endcomment %}
+        </div>
+    </div>
+</main>

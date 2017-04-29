@@ -1,0 +1,45 @@
+---
+layout: base
+---
+
+{% assign hero = page.hero | default: "/assets/img/content/hero-1.png" %}
+
+<div class="lv-hero-wrapper">
+
+    <!-- HERO -->
+    <div class="lv-hero has-height-preset-1X">
+
+        <!-- HERO ITEM -->
+        <div class="lv-hero-item">
+
+            <!-- PARALLAX BG -->
+            <div class="bg-layers">
+                <div class="bg-layer-1" style="background-image: url(/assets/img/layout/clouds-layer-1.jpg)"></div>
+                <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
+            </div>
+
+            <div class="container m-auto">
+                <div class="row">
+                    <div class="col text-center">
+
+                        <!-- HERO CAPTION -->
+                        <div class="lv-hero-item-caption">
+                            <h1>{{ page.title }}</h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /.lv-hero-item -->
+    </div> <!-- /.lv-hero -->
+</div> <!-- /.lv-hero-wrapper -->
+
+<!-- CONTENT -->
+<main class="page-content-container">
+    <div class="container">
+        <div class="page-content">
+            {{ content }}
+        </div>
+    </div>
+</main>

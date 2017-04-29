@@ -1,0 +1,41 @@
+---
+layout: base__page
+---
+
+{% assign faq = site.data.faq %}
+
+<!-- LEADING -->
+<section class="section">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-md-9 text-center">
+
+				<!-- HEADLINE -->
+				<h2 class="h1">Order Your Book Today</h2>
+				<h3 class="subheader">Mal Winter and the Cloud Runners</h3>
+
+				{{ content }}
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-md-10">
+				<h2 class="mb-5">Frequently Asked Questions</h2>
+				<ul class="block-grid-md-2">
+					{% for item in faq %}
+						<li>
+							<h3>{{ item.title }}</h3>
+							{{ item.body | markdownify }}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

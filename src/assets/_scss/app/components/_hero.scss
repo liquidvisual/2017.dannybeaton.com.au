@@ -19,8 +19,8 @@ $hero-lg-height:           rem-calc(600) !default;
 $hero-xl-height:           rem-calc(600) !default;
 
 $hero-sm-height-preset-1:  auto          !default;
-$hero-md-height-preset-1:  rem-calc(600) !default;
-$hero-lg-height-preset-1:  rem-calc(600) !default;
+$hero-md-height-preset-1:  rem-calc(400) !default;
+$hero-lg-height-preset-1:  rem-calc(400) !default;
 
 //-----------------------------------------------------------------
 // HERO WRAPPER
@@ -51,28 +51,28 @@ $hero-lg-height-preset-1:  rem-calc(600) !default;
     }
 
     @include media-breakpoint-up(lg) {
-       height: $hero-lg-height;
+        height: $hero-lg-height;
     }
 
     @include media-breakpoint-up(xl) {
-       height: $hero-xl-height;
+        height: $hero-xl-height;
     }
 
     //=========================================
     // HAS HEIGHT PRESET 1
     //=========================================
 
-    &.has-height-preset-1 {
-        height: $hero-sm-height-preset-1;
+    // &.has-height-preset-1 {
+    //     height: $hero-sm-height-preset-1;
 
-        @include media-breakpoint-up(md) { // added - refactor
-           height: $hero-md-height-preset-1;
-        }
+    //     @include media-breakpoint-up(md) {
+    //         height: $hero-md-height-preset-1;
+    //     }
 
-        @include media-breakpoint-up(lg) {
-           height: $hero-lg-height-preset-1;
-        }
-    }
+    //     @include media-breakpoint-up(lg) {
+    //         height: $hero-lg-height-preset-1;
+    //     }
+    // }
 }
 
 //-----------------------------------------------------------------
@@ -90,10 +90,84 @@ $hero-lg-height-preset-1:  rem-calc(600) !default;
     background-position: center center;
     background-size: cover;
 
+    .lv-hero-caption {
+        margin-top: rem-calc(80);
+        color: white;
+        font-size: rem-calc(80);
+        // text-shadow: 0px 2px 2px rgba(black, 0.3);
+
+        background: rgba(black, 0.4);
+        display: inline-block;
+        padding: 30px 30px 10px 30px;
+        // border-radius: 10px;
+        // color: $brand-primary;
+        box-shadow: 0 3px 10px rgba(black, 0.1);
+
+        h1 {
+            font-size: rem-calc(80);
+            // text-shadow: 0px 2px 2px rgba(black, 0.3);
+
+            background: rgba(black, 0.4);
+            display: inline-block;
+            padding: 30px 30px 10px 30px;
+            // border-radius: 10px;
+            // color: $brand-primary;
+            box-shadow: 0 3px 10px rgba(black, 0.1);
+        }
+
+    }
+
+    img {
+        // border: 1px solid black; // remove
+    }
+
     @include media-breakpoint-down(sm) {
         padding-top: $header-sm-height + 40px;
     }
 }
+
+//=========================================
+//
+//=========================================
+
+.lv-hero-item > .container {
+    // position: relative;
+
+    @include media-breakpoint-up(md) {
+        // left: -30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        // left: -80px;
+    }
+
+    .lv-hero-character {
+        @include media-breakpoint-up(lg) {
+            width: 79%;
+            // width: 90%;
+        }
+    }
+}
+
+//=========================================
+// <h1>
+//=========================================
+
+// .lv-hero-item-caption {
+//     // position: relative;
+
+//     @include media-breakpoint-down(sm) {
+//         // padding: rem-calc(0 20 0 20);
+//     }
+
+//     @include media-breakpoint-up(md) {
+//         // top: 40px;
+//     }
+
+//     @include media-breakpoint-up(xl) {
+//         // top: 60px;
+//     }
+// }
 
 //-----------------------------------------------------------------
 // CLOUDS SCROLLING ANIMATION
@@ -149,48 +223,6 @@ $hero-lg-height-preset-1:  rem-calc(600) !default;
     .bg-layer-1,
     .bg-layer-2 {
         animation: none !important;
-    }
-}
-
-//-----------------------------------------------------------------
-// HOME UNIQUE
-//-----------------------------------------------------------------
-
-.lv-hero-item > .container {
-    position: relative;
-
-    @include media-breakpoint-up(md) {
-        left: -30px;
-    }
-
-    @include media-breakpoint-up(lg) {
-        left: -80px;
-    }
-
-    .lv-hero-character {
-        @include media-breakpoint-up(lg) {
-            width: 79%;
-        }
-    }
-}
-
-//-----------------------------------------------------------------
-// HOME UNIQUE
-//-----------------------------------------------------------------
-
-.lv-hero-item-caption {
-    position: relative;
-
-    @include media-breakpoint-down(sm) {
-        padding: rem-calc(0 20 0 20);
-    }
-
-    @include media-breakpoint-up(md) {
-        top: 40px;
-    }
-
-    @include media-breakpoint-up(xl) {
-        top: 60px;
     }
 }
 

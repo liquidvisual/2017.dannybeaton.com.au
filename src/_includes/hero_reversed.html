@@ -1,0 +1,46 @@
+{% comment %}
+    LIQUIDVISUAL-HERO
+
+    - updated: 06.03.17
+    - notes:
+        * Multiple items in carousel_slides.yml triggers carousel mode
+        * .has-height-preset-1 - used for internal pages to set a height
+{% endcomment %}
+
+<div class="lv-hero-wrapper">
+
+    <!-- HERO -->
+    <div class="lv-hero">
+
+        <!-- HERO ITEM -->
+        <div class="lv-hero-item">
+
+            <!-- PARALLAX BG -->
+            <div class="bg-layers">
+                <div class="bg-layer-1" style="background-image: url(/assets/img/layout/clouds-layer-1.jpg)"></div>
+                <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 text-center">
+
+                        <!-- HERO CAPTION -->
+                        <div class="lv-hero-item-caption">
+                           <h1>{{ page.title }}</h1>
+                           <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                           tempor incididunt ut labore et dolore</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-7 text-center">
+
+                        <!-- SUPPORTING IMAGE -->
+                        <img width="100%" class="lv-hero-character" src="/assets/img/content/heroes/hero-parent@2x.png" alt="Mal Winter and the Cloud Runners, Pre-order today">
+
+                    </div>
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.lv-hero-item -->
+    </div> <!-- /.lv-hero -->
+</div> <!-- /.lv-hero-wrapper -->

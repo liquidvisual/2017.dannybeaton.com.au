@@ -8,8 +8,89 @@
 // VARIABLES
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-// THEMES
+// THEME HOME
 //-----------------------------------------------------------------
+
+.theme-home .lv-hero-item > .container {
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+        left: -30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        left: -80px;
+    }
+
+    .lv-hero-character {
+        @include media-breakpoint-up(lg) {
+            width: 79%;
+        }
+    }
+}
+
+//=========================================
+// HERO ITEM CAPTION
+//=========================================
+
+.theme-home .lv-hero-item-caption {
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+        padding: rem-calc(0 20 0 20);
+    }
+
+    @include media-breakpoint-up(md) {
+        top: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        top: 60px;
+    }
+}
+
+//-----------------------------------------------------------------
+// THEME SHORT HERO
+//-----------------------------------------------------------------
+
+.theme-short-hero {
+    $hero-md-height: rem-calc(350);
+    $hero-lg-height: rem-calc(350);
+    $hero-xl-height: rem-calc(350);
+
+    .lv-page {
+        @include media-breakpoint-up(md) {
+            padding-top: $hero-md-height;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: $hero-lg-height;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-top: $hero-xl-height;
+        }
+    }
+
+    //=========================================
+    // HERO
+    //=========================================
+
+    .lv-hero {
+        @include media-breakpoint-up(md) {
+            height: $hero-md-height;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: $hero-lg-height;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: $hero-xl-height;
+        }
+    }
+}
+
 //=========================================
 //
 //=========================================

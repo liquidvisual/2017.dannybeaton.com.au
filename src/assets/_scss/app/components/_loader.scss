@@ -20,7 +20,15 @@
     height: 100%;
     background: $brand-primary;
     z-index: 2147483647;
-    animation: page-loader-fadeout 1s ease 1.2s alternate 1 forwards;
+    opacity: 1;
+
+    &.force-finish {
+        animation: page-loader-fadeout 1s ease 0s alternate 1 forwards;
+    }
+}
+
+html.has-loaded .lv-page-loader {
+    animation: page-loader-fadeout 1s ease 0.1s alternate 1 forwards;
 }
 
 //-----------------------------------------------------------------

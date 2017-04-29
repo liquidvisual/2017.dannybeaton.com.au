@@ -1,0 +1,31 @@
+---
+layout: base__page
+---
+
+{% assign blog_posts = site.posts %}
+
+<!-- ... -->
+<section class="section">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-md-10">
+				<ul class="block-grid-md-2 block-grid-lg-3">
+					{% for item in blog_posts %}
+						<li>
+							<a href="{{ item.url }}">
+								<article>
+									<figure>
+										<img width="100%" src="http://placehold.it/325x175" alt="Placeholder">
+									</figure>
+									<h3>{{ item.title }}</h3>
+									<date>{{ item.date | date: "%A %d %b %Y" }}</date>
+									{{ item.excerpt | truncatewords: 30 }}
+								</article>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,30 @@
+---
+layout: base__page
+---
+
+{% assign faq = site.data.faq %}
+
+<section class="section">
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-md-9 text-center">
+
+				<!-- HEADLINE -->
+				<h2 class="h1">Need to Reach Danny?</h2>
+				<h3 class="subheader">He Loves Hearing from New Readers</h3>
+
+				{{ content }}
+
+				<div class="spacer mb-4"></div>
+
+				<!-- CONTACT FORM -->
+				<div class="row justify-content-center">
+					<div class="col-md-8 text-left">
+						{% include form_contact.html %}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>

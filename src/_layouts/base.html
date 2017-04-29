@@ -2,7 +2,7 @@
 <html class="no-js" {{ site.environment }}>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-Compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <title>
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 </head>
-<body class="{{ site.theme }}">
+<body class="{{ page.theme }}">
 
     {% include snippets/loader.html %}
 
@@ -32,16 +32,7 @@
             {% include header.html %}
         </header>
 
-        {% include hero.html %}
-
-        <!-- PAGE BODY -->
-        <main class="page-content-container">
-            <div class="container">
-                <div class="page-content">
-                    {{ content }}
-                </div>
-            </div>
-        </main>
+        {{ content }}
 
         <!-- FOOTER -->
         <footer class="global-footer">
