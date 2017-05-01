@@ -2,7 +2,7 @@
 layout: child_layout/blog_item
 date: 2015-02-03
 title:  How I Research Writing Children
-categories: jekyll
+categories: Writing
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build

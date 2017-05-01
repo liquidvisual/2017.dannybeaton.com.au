@@ -5,7 +5,7 @@ permalink: /about/
 hero_image: /assets/img/content/heroes/lion@2x.png
 ---
 
-We don’t always end up where we start and I didn’t start out as a writer. My talent was drawing. I illustrated comic book panels, heroes, monsters and new worlds. I kept drawing until my stories could no longer be contained in pictures, so I turned to writing and set out to be an author.
+We don’t always end up where we start and I didn’t start out as a writer. My ‘thing’ was drawing, I did comic book action panels, illustrated amazing heroic and monstrous characters and designed new worlds. I kept drawing until my stories could no longer be contained in a picture, so I turned to words and decided to be an author.
 
 “Yeah, that could be fun,” I remember thinking. Such an idiot. Writing seems easy, you look at great authors and it looks simple, words on a page telling a story. But I wasn’t very good. I spent years writing a few manuscripts, short stories and even studying a Bachelor of Arts and majoring in writing. Writing was never easier, but eventually it was less hard.
 

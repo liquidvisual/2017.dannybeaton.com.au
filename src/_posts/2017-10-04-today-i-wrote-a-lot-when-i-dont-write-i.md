@@ -2,7 +2,7 @@
 layout: child_layout/blog_item
 date: 2015-02-03
 title:  Today I wrote a lot, When I Don't Write I...
-categories: jekyll
+categories: Personal
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build

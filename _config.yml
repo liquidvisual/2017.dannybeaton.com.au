@@ -23,6 +23,11 @@ collections:
   docs:
     output: true
 
+collections:
+  posts:
+    output: true
+    permalink: /blog/:categories/:title/
+
 # https://github.com/jekyll/jekyll-sitemap
 # If you would like to exclude specific pages/posts from the sitemap set the sitemap flag to false in the front matter for the page/post.
 

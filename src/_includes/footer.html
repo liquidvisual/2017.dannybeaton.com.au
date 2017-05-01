@@ -26,8 +26,8 @@
                         <!-- RECENT POSTS -->
                         <h3>Recent Posts</h3>
                         <ul class="list-unstyled mb-2">
-                            {% for item in site.data.lorem_ipsum | limit: 4 %}
-                                <li><a href="#">{{ item.title | truncate: 60 }}</a></li>
+                            {% for item in site.posts | limit: 4 %}
+                                <li><a href="{{ item.url }}">{{ item.title | truncate: 55 }}</a></li>
                             {% endfor %}
                         </ul>
 

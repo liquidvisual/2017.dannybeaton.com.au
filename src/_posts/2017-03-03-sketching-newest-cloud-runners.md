@@ -2,7 +2,7 @@
 layout: child_layout/blog_item
 date: 2015-02-03
 title:  Sketching newest Cloud Runners
-categories: jekyll
+categories: Drawing
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build

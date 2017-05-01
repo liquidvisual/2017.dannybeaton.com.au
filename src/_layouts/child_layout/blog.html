@@ -9,23 +9,48 @@ layout: base__page
 	<div class="container">
 		<div class="row justify-content-md-center">
 			<div class="col-md-10">
-				<ul class="block-grid-md-2 block-grid-lg-3">
+
+			<style>
+				li {
+					border-bottom: 1px #eee solid;
+				}
+			</style>
+
+			<h2 class="h1 mb-5 text-center">Contents</h2>
+
+			<a href="/blog/categories/">Categories</a>
+
+				<ul class="block-grid-xs-1">
 					{% for item in blog_posts %}
 						<li>
 							<a href="{{ item.url }}">
-								<article>
-									<figure>
-										<img width="100%" src="http://placehold.it/325x175" alt="Placeholder">
-									</figure>
-									<h3>{{ item.title }}</h3>
-									<date>{{ item.date | date: "%d %B %Y" | upcase }}</date>
-
-								</article>
+								<h3>{{ item.title }}</h3>
+								<date>{{ item.date | date: "%d %B %Y" | upcase }}</date>
 							</a>
 						</li>
 					{% endfor %}
 				</ul>
+
 			</div>
 		</div>
 	</div>
 </section>
+
+{% comment %}
+<ul class="block-grid-md-2 block-grid-lg-3">
+	{% for item in blog_posts %}
+		<li>
+			<a href="{{ item.url }}">
+				<article>
+					<figure>
+						<img width="100%" src="http://lorempixel.com/400/300?{{forloop.index}}" alt="Placeholder">
+					</figure>
+					<date>{{ item.date | date: "%d %B %Y" | upcase }}</date>
+					<h3>{{ item.title }}</h3>
+
+				</article>
+			</a>
+		</li>
+	{% endfor %}
+</ul>
+{% endcomment %}
