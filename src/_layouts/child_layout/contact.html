@@ -6,6 +6,56 @@ layout: base__page
 
 <section class="section">
 	<div class="container">
+		<div class="row">
+			<div class="col-md-8 offset-md-1X pl-5 pr-5">
+
+				<!-- HEADLINE -->
+				<h2 class="h3">Need to Reach Danny?</h2>
+				<!-- <h3 class="subheader">He Loves Hearing from New Readers</h3> -->
+
+				{{ content }}
+
+				<div class="spacer mb-4"></div>
+
+				<!-- CONTACT FORM -->
+				{% include form_contact_wide.html %}
+
+
+			</div>
+			<div class="col-md-4 offset-md-1X">
+
+				<aside class="sidebar">
+					<h3>Contact Information</h3>
+
+					<h4>Location</h4>
+					<p>Sydney, Australia</p>
+
+					<h4>Favorite Book</h4>
+					<p>Harry Potter</p>
+
+					<h4>Email Address</h4>
+					<p>contact@dannybeaton.com.au</p>
+
+					<!-- SOCIAL MEDIA -->
+					<ul class="social-media mb-4">
+					    <li><a class="facebook" href="{{ settings.facebook }}"><i class="fa fa-facebook"></i></a></li>
+					    <li><a class="twitter" href="{{ settings.instagram }}"><i class="fa fa-twitter"></i></a></li>
+					    <li><a class="instagram" href="{{ settings.instagram }}"><i class="fa fa-instagram"></i></a></li>
+					    <li><a class="youtube" href="{{ settings.instagram }}"><i class="fa fa-youtube"></i></a></li>
+					</ul>
+				</aside>
+
+
+
+
+			</div>
+		</div>
+	</div>
+</section>
+
+{% comment %}
+<section class="section">
+	<div class="container">
 		<div class="row justify-content-md-center">
 			<div class="col-md-9 text-center">
 
@@ -28,3 +78,4 @@ layout: base__page
 		</div>
 	</div>
 </section>
+{% endcomment %}

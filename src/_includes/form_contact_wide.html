@@ -1,0 +1,64 @@
+<!-- IF SUCCESS -->
+<div class="alert alert-success alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Success!</strong> Thanks for that. Your email has been added to the mailing list.
+</div>
+
+<!-- IF FAILURE -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Oops!</strong> Something went wrong. Please check your details and try again.
+</div>
+
+<!-- FORM CONTACT -->
+<form id="contact" data-toggle="validator" novalidate method="post" action="http://liquidvisual.net/dannybeaton.com.au/contact-form/">
+    <fieldset>
+
+        <div class="row">
+            <div class="col-md-6">
+                <!-- NAME -->
+                <div class="form-group">
+                    <label for="name">Your Name <small>(required)</small></label>
+                    <input class="form-control" id="name" name="Name" type="text" placeholder="Name" required>
+                    <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="email">Your Email <small>(required)</small></label>
+                    <input class="form-control" id="email" name="Email" type="email" placeholder="Email" required>
+                    <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- REFERRAL -->
+        <div class="form-group">
+            <label for="referral">How did you find the site?</label>
+            <select class="form-control custom-select" name="Referral" id="referral">
+                <option disabled selected>Choose one</option>
+                <option value="Google">Google</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Friend">Friend</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="form-group">
+            <label for="message">Your Message <small>(required)</small></label>
+            <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Message" required></textarea>
+            <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A message is required.</small>
+        </div>
+
+        <!-- SUBMIT -->
+        <button type="submit" class="btn btn-primary mb-3 float-right">Send message <i class="fa fa-angle-right"></i></button>
+
+    </fieldset>
+</form>

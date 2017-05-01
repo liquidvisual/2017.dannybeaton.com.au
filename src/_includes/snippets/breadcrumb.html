@@ -15,12 +15,13 @@
 {% assign crumbs = page.url | split: '/' %}
 
 <nav class="lv-breadcrumb breadcrumb">
-    <a class="breadcrumb-item" href="/">Home</a>
+  <!-- <span class="float-left mr-1"><i class="fa fa-arrow-circle-left"></i>&nbsp; Back to</span> -->
+    <!-- <a class="breadcrumb-item" href="/">Home</a> -->
     {% for crumb in crumbs offset: 1 %}
         {% if forloop.last %}
-            <span class="breadcrumb-item">{{ crumb | replace:'-',' ' }}</span>
+            <!-- <span class="breadcrumb-item">{{ crumb | replace:'-',' ' }}</span> -->
         {% else %}
-            <a class="breadcrumb-item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' }}</a>
+            <a class="breadcrumb-item" href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}"><i class="fa fa-arrow-circle-left"></i>&nbsp; Back to {{ crumb | replace:'-',' ' }}</a>
         {% endif %}
     {% endfor %}
 </nav>

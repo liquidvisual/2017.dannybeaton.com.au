@@ -72,27 +72,38 @@
 	//=========================================
 
 	.book {
+		position: relative;
+		display: block;
+
 		@include media-breakpoint-up(xl) {
 			position: absolute;
 			top: -100px;
 		    width: 120%;
 		    z-index: 1;
+		}
 
-		    &::after {
-				content: "";
-				position: absolute;
-				bottom: -30px;
-				left: 0;
-				width: 100%;
-				height: 40px;
-				background: black;
-				padding: 20px;
-				// box-sizing: content-box;
-				border-radius: 100%;
-				z-index: -1;
-				filter: blur(10px);
-				opacity: 0.2;
-		    }
+	    .book-shadow {
+			position: absolute;
+			bottom: -30px;
+			left: 0;
+			width: 100%;
+			height: 40px;
+			background: black;
+			padding: 20px;
+			border-radius: 100%;
+			z-index: -1;
+			filter: blur(10px);
+			opacity: 0.2;
+	    }
+
+		.fg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			// height: 100%; // ipad?
 		}
 
 		//=========================================

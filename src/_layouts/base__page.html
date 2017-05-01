@@ -6,6 +6,7 @@ layout: base
 {% assign hero_image = page.hero_image %}
 {% assign hero_image_caption = page.hero_image_caption %}
 {% assign hero_image_caption_title = page.hero_image_caption_title %}
+{% assign countdown = page.countdown %}
 
 <div class="lv-hero-wrapper">
 
@@ -23,26 +24,32 @@ layout: base
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 push-md-8 text-center">
+                    <div class="col-md-5 push-md-7 d-flex align-items-center">
 
                         <!-- HERO CAPTION -->
-                        <div class="lv-hero-item-caption">
-
+                        <div class="lv-hero-item-caption fill-2X">
                             {% if hero_image_caption %}
 
-                                <p class="mb-4"><img width="100%" src="{{ hero_image_caption }}" alt="{{ hero_image_caption_title }}"></p>
-                                <!-- <a class="btn btn-primary hidden-sm-down" href="#moooore"><i class="fa fa-hand-o-right"></i>&nbsp; Learn more</a> -->
+                                <!-- IMAGE -->
+                                <p class="mb-4">
+                                    <img width="100%" src="{{ hero_image_caption }}" alt="{{ hero_image_caption_title }}">
+                                </p>
+
+                                <!-- COUNTDOWN -->
+                                {% if countdown %}
+                                    <div id="last-titan-preorder-countdown"></div>
+                                {% endif %}
 
                             {% else %}
 
-                                <h1>{{ page.title }}</h1>
+                                <!-- TITLE -->
+                                <h1 class="fill-3X">{{ page.title }}</h1>
 
                             {% endif %}
-
                         </div>
 
                     </div>
-                    <div class="col-md-8 pull-md-4 text-center">
+                    <div class="col-md-7 pull-md-5 text-center">
 
                         <!-- SUPPORTING IMAGE -->
                         <img width="100%" class="lv-hero-character" src="{{ page.hero_image }}" alt="Book Character">
@@ -58,6 +65,7 @@ layout: base
 <main class="page-content-container">
     <div class="container">
         <div class="page-content">
+            {% include snippets/breadcrumb.html %}
             {{ content }}
         </div>
     </div>

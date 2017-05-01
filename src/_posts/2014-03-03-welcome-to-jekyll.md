@@ -1,7 +1,7 @@
 ---
-layout: child_layout/text_page
+layout: child_layout/blog_item
 date: 2015-02-03
-title:  Welcome to Jekyll!
+title:  Sketching newest Cloud Runners
 categories: jekyll
 ---
 

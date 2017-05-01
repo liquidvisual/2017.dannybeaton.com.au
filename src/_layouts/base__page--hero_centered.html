@@ -7,10 +7,10 @@ layout: base
 <div class="lv-hero-wrapper">
 
     <!-- HERO -->
-    <div class="lv-hero has-height-preset-1X">
+    <div class="lv-hero has-height-preset-1X is-dark">
 
         <!-- HERO ITEM -->
-        <div class="lv-hero-item">
+        <div class="lv-hero-item d-flex align-items-end">
 
             <!-- PARALLAX BG -->
             <div class="bg-layers">
@@ -18,13 +18,15 @@ layout: base
                 <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
             </div>
 
-            <div class="container m-auto">
-                <div class="row">
-                    <div class="col text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-11 text-center">
 
                         <!-- HERO CAPTION -->
                         <div class="lv-hero-item-caption">
-                            <h1>{{ page.title }}</h1>
+                            <h4 class="header-type">Blog Article</h4><br>
+                            <h1 class="mb-0">{{ page.title }}</h1>
+                            <date><i class="fa fa-calendar"></i>&nbsp; written {{ page.date | date: '%B %d, %Y' }}</date>
                         </div>
 
                     </div>
@@ -39,6 +41,7 @@ layout: base
 <main class="page-content-container">
     <div class="container">
         <div class="page-content">
+            {% include snippets/breadcrumb.html %}
             {{ content }}
         </div>
     </div>

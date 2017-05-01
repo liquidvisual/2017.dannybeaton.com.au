@@ -1,0 +1,49 @@
+/*
+    COUNTDOWN.CSS
+
+    - Last updated: 30.04.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//--------------------------------------------------------------------
+// COUNTER
+//--------------------------------------------------------------------
+
+.countdown {
+	display: flex;
+	justify-content: space-around;
+	max-width: 90%;
+	padding: rem-calc(10);
+	margin: 0 auto;
+	border-radius: $border-radius;
+	font-family: sans-serif;
+	font-size: rem-calc(10);
+	background: rgba(black, 0.3);
+	-webkit-backdrop-filter: blur(5px);
+	color: white;
+
+	@include media-breakpoint-up(xl) {
+		max-width: 80%;
+	    font-size: rem-calc(12);
+	}
+
+	.digit {
+		font-size: em-calc(50);
+		font-weight: bold;
+		line-height: 1;
+	}
+
+	.text {
+		font-family: sans-serif;
+		font-size: em-calc(12);
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #eee;
+	}
+}
+
+//=========================================
+//
+//=========================================

@@ -3,11 +3,15 @@ layout: base
 ---
 
 {% assign hero = page.hero | default: "/assets/img/content/hero-1.png" %}
+{% assign hero_image = page.hero_image %}
+{% assign hero_image_caption = page.hero_image_caption %}
+{% assign hero_image_caption_title = page.hero_image_caption_title %}
+{% assign countdown = page.countdown %}
 
 <div class="lv-hero-wrapper">
 
     <!-- HERO -->
-    <div class="lv-hero">
+    <div class="lv-hero is-reversed">
 
         <!-- HERO ITEM -->
         <div class="lv-hero-item">
@@ -20,20 +24,18 @@ layout: base
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5 text-center">
+                    <div class="col-md-5 d-flex justify-content-end align-items-center">
 
                         <!-- HERO CAPTION -->
-                        <div class="lv-hero-item-caption">
+                        <div class="lv-hero-item-caption fill-1X">
                            <h1>{{ page.title }}</h1>
-                           <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                           tempor incididunt ut labore et dolore</p>
                         </div>
 
                     </div>
                     <div class="col-md-7 text-center">
 
                         <!-- SUPPORTING IMAGE -->
-                        <img width="100%" class="lv-hero-character" src="/assets/img/content/heroes/hero-parent@2x.png" alt="Mal Winter and the Cloud Runners, Pre-order today">
+                        <img width="100%" class="lv-hero-character" src="{{ hero_image }}" alt="{{ hero_image_caption_title }}">
 
                     </div>
                 </div> <!-- /.row -->
@@ -46,6 +48,7 @@ layout: base
 <main class="page-content-container">
     <div class="container">
         <div class="page-content">
+            {% include snippets/breadcrumb.html %}
             {{ content }}
         </div>
     </div>

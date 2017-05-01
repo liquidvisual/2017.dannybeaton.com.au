@@ -1,5 +1,5 @@
 ---
-layout: child_layout/text_page
+layout: child_layout/books
 title: Books
 permalink: /books/
 hero_image: /assets/img/content/heroes/friends@2x.png

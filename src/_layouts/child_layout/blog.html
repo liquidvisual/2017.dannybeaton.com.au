@@ -18,8 +18,8 @@ layout: base__page
 										<img width="100%" src="http://placehold.it/325x175" alt="Placeholder">
 									</figure>
 									<h3>{{ item.title }}</h3>
-									<date>{{ item.date | date: "%A %d %b %Y" }}</date>
-									{{ item.excerpt | truncatewords: 30 }}
+									<date>{{ item.date | date: "%d %B %Y" | upcase }}</date>
+
 								</article>
 							</a>
 						</li>

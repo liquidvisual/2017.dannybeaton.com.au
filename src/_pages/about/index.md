@@ -5,23 +5,12 @@ permalink: /about/
 hero_image: /assets/img/content/heroes/lion@2x.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+We don’t always end up where we start and I didn’t start out as a writer. My talent was drawing. I illustrated comic book panels, heroes, monsters and new worlds. I kept drawing until my stories could no longer be contained in pictures, so I turned to writing and set out to be an author.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+“Yeah, that could be fun,” I remember thinking. Such an idiot. Writing seems easy, you look at great authors and it looks simple, words on a page telling a story. But I wasn’t very good. I spent years writing a few manuscripts, short stories and even studying a Bachelor of Arts and majoring in writing. Writing was never easier, but eventually it was less hard.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Mal Winter and the Cloud Runners is the first book I published, and is an urban fantasy that is the product of effort, time and then some more effort and more time. The story was conceived to tell a fantastic story to an otherwise ordinary boy, and take readers on a wild adventure ride with its hero. It’s been out since the end of 2014, and now I’m completing the follow up, Mal Winter and the Last Titan.
+
+I’m also working on another epic novel series, the first book is titled Seeds of Equilibrium and it is set in a dark, futuristic world following two young boys who are destined to change the very universe itself.
+
+Beyond books, I’ve written screenplays, short stories and non-fiction articles. From that I won a flash fiction writing competition, had a script turned into a film (Blood Hunt) and had stories published in the Deakin Wordly magazine.

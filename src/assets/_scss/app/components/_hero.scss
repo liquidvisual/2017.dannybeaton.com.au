@@ -1,7 +1,7 @@
 /*
     HERO.CSS
 
-    - Last updated: 06.03.17
+    - Last updated: 01.04.17
     - liquidvisual.com
     - notes:
         * liquidvisual recommends bxSlider for hero carousels
@@ -17,10 +17,6 @@ $hero-sm-height:           auto          !default; // default: auto // IMPORTANT
 $hero-md-height:           rem-calc(575) !default;
 $hero-lg-height:           rem-calc(600) !default;
 $hero-xl-height:           rem-calc(600) !default;
-
-$hero-sm-height-preset-1:  auto          !default;
-$hero-md-height-preset-1:  rem-calc(400) !default;
-$hero-lg-height-preset-1:  rem-calc(400) !default;
 
 //-----------------------------------------------------------------
 // HERO WRAPPER
@@ -57,22 +53,6 @@ $hero-lg-height-preset-1:  rem-calc(400) !default;
     @include media-breakpoint-up(xl) {
         height: $hero-xl-height;
     }
-
-    //=========================================
-    // HAS HEIGHT PRESET 1
-    //=========================================
-
-    // &.has-height-preset-1 {
-    //     height: $hero-sm-height-preset-1;
-
-    //     @include media-breakpoint-up(md) {
-    //         height: $hero-md-height-preset-1;
-    //     }
-
-    //     @include media-breakpoint-up(lg) {
-    //         height: $hero-lg-height-preset-1;
-    //     }
-    // }
 }
 
 //-----------------------------------------------------------------
@@ -90,45 +70,18 @@ $hero-lg-height-preset-1:  rem-calc(400) !default;
     background-position: center center;
     background-size: cover;
 
-    .lv-hero-caption {
-        margin-top: rem-calc(80);
-        color: white;
-        font-size: rem-calc(80);
-        // text-shadow: 0px 2px 2px rgba(black, 0.3);
-
-        background: rgba(black, 0.4);
-        display: inline-block;
-        padding: 30px 30px 10px 30px;
-        // border-radius: 10px;
-        // color: $brand-primary;
-        box-shadow: 0 3px 10px rgba(black, 0.1);
-
-        h1 {
-            font-size: rem-calc(80);
-            // text-shadow: 0px 2px 2px rgba(black, 0.3);
-
-            background: rgba(black, 0.4);
-            display: inline-block;
-            padding: 30px 30px 10px 30px;
-            // border-radius: 10px;
-            // color: $brand-primary;
-            box-shadow: 0 3px 10px rgba(black, 0.1);
-        }
-
+    @include media-breakpoint-down(sm) {
+        padding-top: $header-sm-height + 40px; // [LOCKED]
     }
 
     img {
         // border: 1px solid black; // remove
     }
-
-    @include media-breakpoint-down(sm) {
-        padding-top: $header-sm-height + 40px;
-    }
 }
 
-//=========================================
-//
-//=========================================
+//-----------------------------------------------------------------
+// HERO ITEM CONTAINER
+//-----------------------------------------------------------------
 
 .lv-hero-item > .container {
     // position: relative;
@@ -144,30 +97,60 @@ $hero-lg-height-preset-1:  rem-calc(400) !default;
     .lv-hero-character {
         @include media-breakpoint-up(lg) {
             width: 79%;
-            // width: 90%;
+            width: 90%;
         }
     }
 }
 
-//=========================================
-// <h1>
-//=========================================
+.is-reversed .lv-hero-item .lv-hero-character {
+    @include media-breakpoint-up(lg) {
+        width: 90%;
+        // width: 90%;
+    }
+}
 
-// .lv-hero-item-caption {
-//     // position: relative;
+//-----------------------------------------------------------------
+// HERO ITEM CAPTION
+//-----------------------------------------------------------------
 
-//     @include media-breakpoint-down(sm) {
-//         // padding: rem-calc(0 20 0 20);
-//     }
+.lv-hero-item-caption {
+    position: relative;
+    display: inline-block;
 
-//     @include media-breakpoint-up(md) {
-//         // top: 40px;
-//     }
+    @include media-breakpoint-down(sm) {
+        // padding: rem-calc(0 20 0 20);
+    }
 
-//     @include media-breakpoint-up(xl) {
-//         // top: 60px;
-//     }
-// }
+    @include media-breakpoint-up(md) {
+        // top: 40px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        // top: -25px; //-$header-sm-height; // [LOCKED]
+        // left: 200px;
+        padding-bottom: $header-sm-height * 2;
+    }
+
+    //=========================================
+    // CAPTION HEADER
+    //=========================================
+
+    h1, .h1 {
+        display: inline-block;
+        font-family: 'Roboto Slab';
+        // font-family: 'Century Gothic';
+        // font-weight: bold;
+        font-size: rem-calc(75);
+        // font-weight: 700;
+        font-weight: 700;
+        color: white;
+
+        // https://css-tricks.com/adding-stroke-to-web-text/
+        // -webkit-text-stroke: 1px rgba(darken($brand-quinary, 10%), 0.8);
+        text-shadow: 0px 2px 2px rgba(black, 0.5);
+        // text-shadow: 1px 3px 1px darken($brand-quinary, 10%);
+    }
+}
 
 //-----------------------------------------------------------------
 // CLOUDS SCROLLING ANIMATION
@@ -206,6 +189,15 @@ $hero-lg-height-preset-1:  rem-calc(400) !default;
     .bg-layer-2 {
         animation: hero-layer-2-scroller #{300*$cloud-speed/2}s linear infinite;
     }
+}
+
+.is-dark .bg-layers {
+    opacity: 0.2;
+    // display: none;
+}
+
+.is-dark .lv-hero-item {
+    // background-color: teal;
 }
 
 //=========================================

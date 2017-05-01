@@ -1,7 +1,7 @@
 ---
-layout: child_layout/text_page
+layout: child_layout/blog_item
 date: 2014-03-01
-title: Example content
+title: Customize the Browser’s Scrollbar with CSS
 categories: jekyll example
 ---
 
