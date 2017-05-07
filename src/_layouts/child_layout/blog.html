@@ -4,53 +4,103 @@ layout: base__page
 
 {% assign blog_posts = site.posts %}
 
-<!-- ... -->
 <section class="section">
 	<div class="container">
 		<div class="row justify-content-md-center">
-			<div class="col-md-10">
+			<div class="col-md-11">
 
-			<style>
-				li {
-					border-bottom: 1px #eee solid;
-				}
-			</style>
+				<div class="row no-gutters">
+					<div class="col-8 d-flexXXXXXXXXXX">
 
-			<h2 class="h1 mb-5 text-center">Contents</h2>
+						{% for item in blog_posts | limit: 1 %}
 
-			<a href="/blog/categories/">Categories</a>
+							<!-- CARD FEATURE -->
+							<div class="card-feature">
+								<span class="card-bg" style="background-image: url(/assets/img/content/300.jpeg);"></span>
+								<img width="100%" src="/assets/img/content/300.jpeg" alt="Placeholder">
+								<div class="card-feature-body">
+									<span class="category">{{ item.categories }}</span>
+									<h2 class="mb-0">{{ item.title }}</h2>
+									Posted <date>{{ item.date | date: "%d %B %Y" }}</date>
+								</div>
+							</div>
 
-				<ul class="block-grid-xs-1">
-					{% for item in blog_posts %}
+						{% endfor %}
+
+					</div>
+					<div class="col-4 d-flex">
+
+						<!-- SUBSCRIBE BOX -->
+						<div class="sidebar-box">
+							<h3>Become a Subscriber</h3>
+							<p>Receive Danny's newsletter to stay on top of the latest posts.</p>
+							{% include form_subscribe_box.html %}
+						</div>
+
+					</div>
+				</div>
+
+				<div class="spacer mb-2"></div>
+
+				<!-- MORE -->
+				<ul class="block-grid-xs-1 block-grid-md-2 block-grid-lg-3 block-grid-condensed">
+
+					<!-- SECOND POST -->
+					{% for item in blog_posts | offset: 1 | limit: 1 %}
 						<li>
 							<a href="{{ item.url }}">
-								<h3>{{ item.title }}</h3>
-								<date>{{ item.date | date: "%d %B %Y" | upcase }}</date>
+								<div class="card-tile">
+									<span class="card-bg" style="background-image: url(/assets/img/content/placeholder.jpeg);"></span>
+									<img width="100%" src="/assets/img/content/placeholder.jpeg" alt="...">
+									<div class="card-tile-body">
+										<span class="category">{{ item.categories }}</span>
+										<br>
+										<h2 class="mb-0">{{ item.title }}</h2>
+										<date>{{ item.date | date: "%d %B %Y" }}</date>
+									</div>
+								</div>
 							</a>
 						</li>
 					{% endfor %}
-				</ul>
 
+					<!-- TWITTER POST -->
+					<li>
+						{% include latest_tweet.html %}
+					</li>
+
+					<!-- SECOND POST -->
+					{% for item in blog_posts | offset: 3 | limit: 3 %}
+						<li>
+							<a href="{{ item.url }}">
+								<div class="card-tile">
+									<span class="card-bg" style="background-image: url(/assets/img/content/placeholder.jpeg);"></span>
+									<img width="100%" src="/assets/img/content/placeholder.jpeg" alt="...">
+									<div class="card-tile-body">
+										<span class="category">{{ item.categories }}</span>
+										<br>
+										<h2 class="mb-0">{{ item.title }}</h2>
+										<date>{{ item.date | date: "%d %B %Y" }}</date>
+									</div>
+								</div>
+							</a>
+						</li>
+					{% endfor %}
+
+					<!-- VIEW MORE POSTS -->
+					<li>
+						<a href="{{ item.url }}">
+							<div class="card-tile is-read-more">
+								<span class="card-bg"></span>
+								<img width="100%" src="http://lorempixel.com/320/320?{{forloop.index}}" alt="...">
+								<div class="card-tile-body">
+									<h3>View More Posts <i class="fa fa-angle-right"></i></h3>
+								</div>
+							</div>
+						</a>
+					</li>
+
+				</ul>
 			</div>
 		</div>
 	</div>
 </section>
-
-{% comment %}
-<ul class="block-grid-md-2 block-grid-lg-3">
-	{% for item in blog_posts %}
-		<li>
-			<a href="{{ item.url }}">
-				<article>
-					<figure>
-						<img width="100%" src="http://lorempixel.com/400/300?{{forloop.index}}" alt="Placeholder">
-					</figure>
-					<date>{{ item.date | date: "%d %B %Y" | upcase }}</date>
-					<h3>{{ item.title }}</h3>
-
-				</article>
-			</a>
-		</li>
-	{% endfor %}
-</ul>
-{% endcomment %}

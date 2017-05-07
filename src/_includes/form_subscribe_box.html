@@ -1,0 +1,36 @@
+{% assign settings = site.data.settings %}
+
+<!-- IF SUCCESS -->
+<div class="alert alert-success alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Success!</strong> Thanks for that. Your email has been added to the mailing list.
+</div>
+
+<!-- IF FAILURE -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Oops!</strong> Something went wrong. Please check your details and try again.
+</div>
+
+<!-- FORM SUBSCRIBE -->
+<form data-toggle="validator">
+    <fieldset>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <!-- <label for="email">Your Email <small>(required)</small></label> -->
+                    <input  class="form-control" id="email" name="Email" type="text" placeholder="Enter Your Email" required>
+                    <small class="error shake animated"><i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
+                </div>
+
+                <!-- SUBMIT -->
+                <button type="submit" class="btn btn-primary btn-block mb-0">Subscribe <i class="fa fa-angle-right"></i></button>
+
+            </div>
+        </div>
+    </fieldset>
+</form>

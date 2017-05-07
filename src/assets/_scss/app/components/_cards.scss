@@ -1,0 +1,168 @@
+/*
+    CARDS.CSS
+
+    - Last updated: 03.05.17
+    - liquidvisual.com
+*/
+//--------------------------------------------------------------------
+// VARIABLES
+//--------------------------------------------------------------------
+
+.card-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.6;
+	transition: transform 500ms ease;
+
+	// &:hover {
+	// 	transform: scale(1.1);
+	// }
+}
+
+
+.category {
+	padding: 1px 5px;
+	background: $brand-tertiary;
+	font-family: 'Roboto Slab';
+	font-weight: bold;
+	font-size: rem-calc(12);
+	text-transform: uppercase;
+	color: black;
+}
+
+//--------------------------------------------------------------------
+// CARD FEATURE - APPEARS IN BLOG
+//--------------------------------------------------------------------
+
+.card-tile {
+	display: flex;
+	position: relative;
+	background: $brand-primary;
+	overflow: hidden;
+	font-size: rem-calc(20); // for the date (in type)
+
+	.card-bg {
+		opacity: 0.2;
+	}
+
+	a {
+		color: white;
+	}
+
+	//=========================================
+	// is-twitter
+	//=========================================
+
+	&.is-read-more,
+	&.is-twitter {
+		background: #37b6ed;
+
+		.card-bg {
+			opacity: 0;
+		}
+
+		.card-tile-body {
+			padding: $spacer*1.5;
+			top: 0;
+			bottom: auto;
+		}
+
+		a {
+			font-weight: bold;
+		}
+	}
+
+	&.is-twitter p,
+	&.is-twitter a {
+		font-size: rem-calc(20);
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+		hyphens: auto;
+	}
+
+	&.is-twitter .fa {
+		font-size: rem-calc(50);
+		position: absolute;
+		top: 100%;
+	}
+
+	//=========================================
+	// is-read-more
+	//=========================================
+
+	&.is-read-more {
+		background: $brand-secondary;
+
+		.card-tile-body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
+	}
+
+	//=========================================
+	//
+	//=========================================
+
+	.card-bg + img {
+		visibility: hidden;
+	}
+
+	.card-tile-body {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: $spacer*1.5;
+		color: white;
+
+		h1, h2, h3, h4, h5, h6 {
+			color: white;
+			font-family: 'Roboto Slab';
+			font-size: rem-calc(23);
+		}
+	}
+}
+
+//--------------------------------------------------------------------
+// CARD FEATURE - APPEARS IN BLOG AT TOP
+//--------------------------------------------------------------------
+
+.card-feature {
+	display: flex;
+	position: relative;
+	background: black;
+	font-size: rem-calc(22); // for the date (in type)
+
+	.card-bg + img {
+		visibility: hidden;
+	}
+
+	.card-feature-body {
+		position: absolute;
+		left: $spacer*1.5;
+		bottom: $spacer*1.5;
+		color: white;
+
+		@include media-breakpoint-up(xl) {
+		    padding-right: rem-calc(100);
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			color: white;
+			font-family: 'Roboto Slab';
+		}
+	}
+}
+
+
+
+//=========================================
+//
+//=========================================

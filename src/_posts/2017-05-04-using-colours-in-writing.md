@@ -1,7 +1,7 @@
 ---
 layout: child_layout/blog_item
 date: 2015-02-03
-title:  How I Research Writing Children
+title: Using Colours in Writing
 categories: Writing
 ---
 

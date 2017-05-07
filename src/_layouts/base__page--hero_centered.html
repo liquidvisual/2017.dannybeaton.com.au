@@ -24,9 +24,9 @@ layout: base
 
                         <!-- HERO CAPTION -->
                         <div class="lv-hero-item-caption">
-                            <h4 class="header-type">Blog Article</h4><br>
-                            <h1 class="mb-0">{{ page.title }}</h1>
-                            <date><i class="fa fa-calendar"></i>&nbsp; written {{ page.date | date: '%B %d, %Y' }}</date>
+                            <h4 class="header-type mb-0">{{ page.categories }} &nbsp;<i class="fa fa-pencil"></i></h4><br>
+                            <h1>{{ page.title }}</h1>
+                            <p class="date">by <a href="">@dannybeaton</a> | on <date>{{ page.date | date: '%B %d, %Y' }}</date></p>
                         </div>
 
                     </div>

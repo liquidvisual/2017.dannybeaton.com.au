@@ -33,6 +33,15 @@ form[data-toggle="validator"] .error {
 	color: white;
 }
 
+form[data-toggle="validator"] .disabled {
+	opacity: 1; // decision
+
+
+	&:focus {
+		color: white !important;
+	}
+}
+
 form[data-toggle="validator"] .has-error .form-control,
 form[data-toggle="validator"] .has-error.input-group {
 	margin-bottom: rem-calc(10);

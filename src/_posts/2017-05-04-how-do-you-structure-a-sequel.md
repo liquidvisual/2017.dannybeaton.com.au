@@ -1,7 +1,7 @@
 ---
 layout: child_layout/blog_item
 date: 2015-02-03
-title:  How Do You Structure a Sequel? (Asking for a Friend)
+title: How Do You Structure a Sequel? (Asking for a Friend)
 categories: Writing
 ---
 

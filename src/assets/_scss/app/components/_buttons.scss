@@ -21,7 +21,8 @@
 //-----------------------------------------------------------------
 
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-primary.disabled {
 	// font-size: rem-calc(22); // previous font choice
 	// line-height: 1.4;
 	line-height: 26px; // force

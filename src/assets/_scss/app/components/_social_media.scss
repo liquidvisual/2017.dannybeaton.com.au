@@ -42,8 +42,37 @@
 }
 
 //-----------------------------------------------------------------
-//
+// CONTEXT
 //-----------------------------------------------------------------
+
+.lv-breadcrumb .social-media {
+	// align-self: center;
+	// margin-left: auto;
+
+	li a {
+		width: 46px;
+		height: 30px;
+		border-radius: $border-radius-sm;
+		background: none;
+		color: white;
+		// border: 1px solid darken(#eceeef, 15%);
+		font-size: 18px;
+
+		&.google-plus {
+			background: #dd4b3e;
+
+		}
+
+		&.twitter {
+			background: #00aded;
+		}
+
+		&.facebook {
+			background: #325a97;
+		}
+	}
+}
+
 //=========================================
 //
 //=========================================

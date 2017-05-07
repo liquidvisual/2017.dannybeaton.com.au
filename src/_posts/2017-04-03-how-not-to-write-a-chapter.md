@@ -1,7 +1,7 @@
 ---
 layout: child_layout/blog_item
 date: 2015-02-03
-title:  How Not to Write a Chapter
+title: How Not to Write a Chapter
 categories: Writing
 ---
 

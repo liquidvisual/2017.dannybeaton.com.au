@@ -1,39 +1,17 @@
 ---
 layout: child_layout/blog_item
 date: 2015-02-03
-title:  How I Research Writing Children
+title: How I Research Writing Children
 categories: Writing
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build
-(or run with the `-w` switch) to see your changes! To add new posts, simply add
-a file in the `_posts` directory that follows the convention:
-YYYY-MM-DD-name-of-post.ext.
+This morning I’d gone to bed just past 2AM, desperate for sleep after a day of travel. There had barely been a moment to pass out when I heard a knock at my hotel room door: seven strangers informed me that I’d been chosen for a secret meeting. The next thing I knew, I was outside in the snow and whipping wind. We met with a man named Mark, who warned us that a nefarious organization might be behind a series of murders that had started in the area. We would help him uncover those responsible, he said, but first we had to perform a ritual. One that would bind us together as members of an order so secret I can’t even reveal its name here.
 
-<!--more-->
+It was just your typical [Thursday night][redcarpet] at the Overlook Film Festival.
 
-We've also added a lot of different settings for [Redcarpet][redcarpet],
-including being able to ^superscript, _underline_, ==highlight==,
-~~strikethrough~~, and footnotes.[^1] It even automatically makes links into
-URLs: www.jekyllrb.com and you can put multiple underscores in words without
-them leaning all over the place: this_word_has_underscores. It'll also make your
-quotes look nice, like this: "hoho", your dashes and hypens will be dashing too:
----/--.
+Film festivals have been stretching themselves beyond programming movies for decades, but the Overlook Film Festival — which wrapped its inaugural run this past weekend at the Timberline Lodge in Mount Hood, Oregon — offered another proposition entirely. A four-day event devoted not just to scary movies but scary immersive experiences, the festival was a genre playground, one that wrapped attendees in its creepy, interactive vibe, and never let them go.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of
-Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+The intent was clear from the venue itself: the Timberline is better known as the exterior of the Overlook Hotel in Stanley Kubrick’s The Shining, a vast and imposing structure that was buried deep in snow, as if to echo that film’s terrifying third act. There were the usual festival trappings of debut screenings (Trey Edward Shults’ It Comes at Night) and filmmaker parties, but Overlook’s secret was that it offered something more: the chance for visitors to step inside their own living, breathing horror movie, where nearly anything was possible.
 
 [redcarpet]: https://github.com/vmg/redcarpet
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll]:    http://jekyllrb.com/docs/home/
 [^1]: Who are quite handy

@@ -12,6 +12,8 @@
 //--------------------------------------------------------------------
 
 .breadcrumb {
+	display: flex;
+	align-items: center;
 	position: absolute;
 	top: -50px;
 	width: 100%;
@@ -31,7 +33,8 @@
 //-----------------------------------------------------------------
 
 .breadcrumb-item + .breadcrumb-item::before {
-	content: "\f105";
+	// content: "\f105";
+	content: "";
 	font-family: 'FontAwesome';
 	color: #222;
 	// font-weight: bold;

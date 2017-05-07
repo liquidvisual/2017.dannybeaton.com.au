@@ -1,7 +1,7 @@
 ---
 layout: child_layout/blog_item
 date: 2015-02-03
-title:  Today I wrote a lot, When I Don't Write I...
+title: Today I wrote a lot, When I Don't Write I...
 categories: Personal
 ---
 

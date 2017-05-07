@@ -2,18 +2,102 @@
 layout: base__page--hero_centered
 ---
 
+{% assign blog_posts = site.posts %}
+
 <section class="section">
 	<div class="container">
+		<div class="row px-5">
+			<div class="col-md-8">
+				<div class="wysiwyg">
+					{{ content }}
+
+					<h6 class="ml-4 mt-4"><img class="mb-2" width="40" src="/assets/img/layout/logo-mark.svg"><br>- DANNY</h6>
+
+					<hr>
+
+					<p class="text-right">
+						<a class="" href="">Next Article <i class="fa fa-angle-right"></i></a>
+					</p>
+
+				</div>
+			</div>
+			<div class="col-md-4 pl-5">
+
+				<!-- SUBSCRIBE BOX -->
+				<div class="sidebar-box mb-4">
+					<h3>Subscribe Now</h3>
+					<p>Receive Danny's newsletter to stay on top of the latest posts.</p>
+					{% include form_subscribe_box.html %}
+				</div>
+
+				<h3>Categories</h3>
+				{% for category in site.categories %}
+					{% capture category_name %}{{ category | first }}{% endcapture %}
+					<h4 class="category-head">{{ category_name }}</h4>
+				{% endfor %}
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+			</div>
+		</div>
+
+		<div class="spacer mb-4"></div>
+
+		<!-- BLOG POSTS -->
 		<div class="row justify-content-center">
 			<div class="col-md-11">
 
-				<i class="fa fa-tag"></i>
-				<a href="">browser</a>,
-				<a href="">extensions</a>,
-				<a href="">safari</a>
+				<h3 class="h2">More Articles</h3>
 
-				{{ content }}
+				<ul class="block-grid-xs-1 block-grid-md-2 block-grid-lg-4 block-grid-condensed">
+					{% for item in blog_posts | limit: 4 %}
+						<li>
+							<a href="{{ item.url }}">
+								<div class="card-tile">
+									<span class="card-bg" style="background-image: url(http://lorempixel.com/320/320?{{forloop.index}});"></span>
+									<img width="100%" src="http://lorempixel.com/320/320?{{forloop.index}}" alt="...">
+									<div class="card-tile-body">
+										<span class="category">{{ item.categories }}</span>
+										<br>
+										<h2 class="mb-0">{{ item.title }}</h2>
+										<date>{{ item.date | date: "%d %B %Y" }}</date>
+									</div>
+								</div>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
 			</div>
 		</div>
+
+		<div class="spacer mb-4"></div>
+
+		<!-- DISQUS COMMENTS -->
+		<div id="disqus_thread"></div>
+		<script>
+		/**
+		*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+		*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+		/*
+		var disqus_config = function () {
+		this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+		this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+		*/
+		(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://dannybeaton.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+		})();
+		</script>
+		<script id="dsq-count-scr" src="https://dannybeaton.disqus.com/count.js" async></script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 	</div>
 </section>

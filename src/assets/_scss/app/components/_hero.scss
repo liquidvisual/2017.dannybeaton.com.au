@@ -129,6 +129,23 @@ $hero-xl-height:           rem-calc(600) !default;
         // top: -25px; //-$header-sm-height; // [LOCKED]
         // left: 200px;
         padding-bottom: $header-sm-height * 2;
+        // padding-bottom: 80px;
+    }
+
+    //=========================================
+    // 'BLOG ARTICLE' frill
+    //=========================================
+
+    .header-type {
+        display: inline-block;
+        padding: 5px 10px;
+        border-top: 4px solid $brand-quaternary;
+        font-family: 'Roboto Slab';
+        font-size: rem-calc(16);
+        font-weight: normal;
+        color: darken($brand-primary, 30%); //white;
+        text-transform: uppercase;
+        background: rgba(white, 0.5);
     }
 
     //=========================================
@@ -149,6 +166,20 @@ $hero-xl-height:           rem-calc(600) !default;
         // -webkit-text-stroke: 1px rgba(darken($brand-quinary, 10%), 0.8);
         text-shadow: 0px 2px 2px rgba(black, 0.5);
         // text-shadow: 1px 3px 1px darken($brand-quinary, 10%);
+    }
+
+    //=========================================
+    // DATE
+    //=========================================
+
+    .date {
+        font-family: 'Roboto Slab';
+        color: white;
+        font-size: rem-calc(18);
+
+        a {
+            color: $brand-tertiary;
+        }
     }
 }
 

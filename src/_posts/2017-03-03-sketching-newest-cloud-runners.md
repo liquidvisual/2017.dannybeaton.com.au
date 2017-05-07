@@ -1,7 +1,7 @@
 ---
 layout: child_layout/blog_item
 date: 2015-02-03
-title:  Sketching newest Cloud Runners
+title: Sketching newest Cloud Runners
 categories: Drawing
 ---
 
