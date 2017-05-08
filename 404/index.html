@@ -39,9 +39,11 @@
 
                 <!-- LOGO -->
                 <a class="logo" href="/" title="The Official Danny Beaton Website - Mal Winter and the Cloud Runners" itemprop="url">
-                    <img src="/assets/img/content/logo.svg" alt="Danny Beaton" itemprop="logo">
-                    <span class="text hidden-sm-down">Danny Beaton</span>
-                </a>
+                    <img class="hidden-md-up" src="/assets/img/content/logo.svg" alt="Danny Beaton" itemprop="logo">
+                    <img class="hidden-sm-down" src="/assets/img/content/logo-type.svg" alt="Danny Beaton" itemprop="logo">
+
+                    <!-- <span class="text hidden-sm-down">Danny Beaton</span> -->
+                    </a>
 
                 <!-- HAMBURGER -->
                 <div class="global-header-hamburger hidden-lg-up">
@@ -123,28 +125,39 @@
         <div class="lv-hero-wrapper">
 
             <!-- HERO -->
-            <div class="lv-hero has-height-preset-1X">
+            <div class="lv-hero">
 
                 <!-- HERO ITEM -->
                 <div class="lv-hero-item">
 
                     <!-- PARALLAX BG -->
-                    <div class="bg-layers">
+                    <div class="bg-layers" data-parallax-scroll=".03">
                         <div class="bg-layer-1" style="background-image: url(/assets/img/layout/clouds-layer-1.jpg)"></div>
                         <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
                     </div>
-                    <div class="container m-auto">
+                    <div class="container" data-parallax-scroll="-.06">
                         <div class="row">
-                            <div class="col text-center">
+                            <div class="col-md-5 push-md-7 d-flex align-items-center">
 
                                 <!-- HERO CAPTION -->
-                                <div class="lv-hero-item-caption">
-                                    <h1>404: Page not found</h1>
+                                <div class="lv-hero-item-caption fill-2X">
+
+                                    <!-- TITLE -->
+                                    <h1 class="fill-3X">404: Page not found</h1>
                                 </div>
                             </div>
+                            <div class="col-md-7 pull-md-5 text-center">
+
+                                <!-- SUPPORTING IMAGE -->
+                                <img width="100%" class="lv-hero-character" src="" alt="Book Character">
+                            </div>
                         </div>
+
+                        <!-- /.row -->
+                        </div>
+
+                    <!-- /.container -->
                     </div>
-                </div>
 
                 <!-- /.lv-hero-item -->
                 </div>
@@ -155,16 +168,48 @@
         <!-- /.lv-hero-wrapper -->
         
 <!-- CONTENT --><main class="page-content-container">
+
+            <!-- <div class="page-content-container-bleed" data-parallax-scroll="0.2"></div> -->
             <div class="container">
                 <div class="page-content">
-                    <div class="container">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <nav class="lv-breadcrumb breadcrumb">
 
-                        <!-- <button class="btn btn-primary" type="button">Send</button>
-                        <button class="btn btn-secondary" type="button">Send</button>
-                <a href="#" class="btn btn-primary">Anchor</a>
-                <a href="#" class="btn btn-secondary">Anchor</a>
-                <a href="" class="btn">hello no style</a> -->
+                        <!-- <span class="float-left mr-1"><i class="fa fa-arrow-circle-left"></i>&nbsp; Back to</span> -->
+                        
+<!-- <a class="breadcrumb-item" href="/">Home</a> -->
+<!-- <span class="breadcrumb-item">404</span> -->
+<!-- TOOLS PANEL --><div class="d-flex align-items-center ml-auto">
+
+                            <!-- COMMENT COUNTER -->
+                            <div class="comment-counter mr-3">
+                                <i class="fa fa-comments"></i>
+                                <a href="/404/#disqus_thread">0 comments</a>
+                            </div>
+
+                            <!-- SOCIAL MEDIA -->
+                            <ul class="social-media">
+                                <li>
+                                    <a class="facebook" href="">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="twitter" href="">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="google-plus" href="">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="container">
+                        <h1 id="page-not-found">404: Page not found</h1>
+                        <p>Sorry, we’ve misplaced that URL or it’s pointing to something that doesn’t exist.
+                            <a href="/">Head back home</a> to try finding it again.</p>
                     </div>
                 </div>
             </div>
@@ -215,16 +260,16 @@
                                     <h3>Recent Posts</h3>
                                     <ul class="list-unstyled mb-2">
                                         <li>
-                                            <a href="#">That's Pie Country. They Do a Lot of Baking Up There.</a>
+                                            <a href="/blog/personal/today-i-wrote-a-lot-when-i-dont-write-i/">Today I wrote a lot, When I Don't Write I...</a>
                                         </li>
                                         <li>
-                                            <a href="#">What's the Deal with Airline Peanuts?</a>
+                                            <a href="/blog/writing/using-colours-in-writing/">Using Colours in Writing</a>
                                         </li>
                                         <li>
-                                            <a href="#">Nothing's Finer Than Being in Your Diner</a>
+                                            <a href="/blog/writing/how-do-you-structure-a-sequel/">How Do You Structure a Sequel? (Asking for a Friend)</a>
                                         </li>
                                         <li>
-                                            <a href="#">Yadda Yadda Yadda</a>
+                                            <a href="/blog/writing/how-i-research-writing-children/">How I Research Writing Children</a>
                                         </li>
                                     </ul>
 
@@ -264,7 +309,7 @@
                                         <div class="col">
                                             <div class="input-group form-group">
                                                 <input class="form-control" id="email" name="Email" type="text" placeholder="Enter Your Email" required>
-                                                <button class="btn btn-primary" type="button">Send</button>
+                                                <button class="btn btn-primary" type="submit">Send</button>
                                                 <i class="fa fa-envelope"></i>
                                             </div>
                                             <small class="error shake animated">
@@ -379,11 +424,11 @@
     <!-- **** JAVASCRIPT **** -->
     <script src="/assets/scripts/minified.js"></script>
     <script>
-    //CLOUD PARALLAX
-    // var target = $('.lv-hero-item')[0];
+    // CLOUD PARALLAX
+    // var target = $('.has-parallax')[0];
     // var parallax = new Parallax(target, {
-    //     limitX: 8,
-    //     limitY: 0,
+    //     limitX: 10,
+    //     limitY: 10,
     // });
     </script>
 

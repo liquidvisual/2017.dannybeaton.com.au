@@ -39,9 +39,11 @@
 
                 <!-- LOGO -->
                 <a class="logo" href="/" title="The Official Danny Beaton Website - Mal Winter and the Cloud Runners" itemprop="url">
-                    <img src="/assets/img/content/logo.svg" alt="Danny Beaton" itemprop="logo">
-                    <span class="text hidden-sm-down">Danny Beaton</span>
-                </a>
+                    <img class="hidden-md-up" src="/assets/img/content/logo.svg" alt="Danny Beaton" itemprop="logo">
+                    <img class="hidden-sm-down" src="/assets/img/content/logo-type.svg" alt="Danny Beaton" itemprop="logo">
+
+                    <!-- <span class="text hidden-sm-down">Danny Beaton</span> -->
+                    </a>
 
                 <!-- HAMBURGER -->
                 <div class="global-header-hamburger hidden-lg-up">
@@ -129,18 +131,18 @@
                 <div class="lv-hero-item">
 
                     <!-- PARALLAX BG -->
-                    <div class="bg-layers">
+                    <div class="bg-layers" data-parallax-scroll=".03">
                         <div class="bg-layer-1" style="background-image: url(/assets/img/layout/clouds-layer-1.jpg)"></div>
                         <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
                     </div>
-                    <div class="container">
+                    <div class="container" data-parallax-scroll="-.06">
                         <div class="row">
                             <div class="col-md-4 push-md-8 text-center">
 
                                 <!-- HERO CAPTION -->
                                 <div class="lv-hero-item-caption">
                                     <p class="mb-4">
-                                        <img width="100%" src="/assets/img/content/hero-mal-text@2x.png" alt="Mal Winter and the Cloud Runners - Available Now">
+                                        <img width="100%" src="/assets/img/content/headers/available-cloud-runners@2x.png" alt="Mal Winter and the Cloud Runners - Available Now">
                                     </p>
                                     <a class="btn btn-primary hidden-sm-down" href="#moooore">
                                         <i class="fa fa-hand-o-right"></i>&nbsp; Learn more</a>
@@ -149,7 +151,7 @@
                             <div class="col-md-8 pull-md-4 text-center">
 
                                 <!-- SUPPORTING IMAGE -->
-                                <img width="100%" class="lv-hero-character" src="/assets/img/content/hero-mal@2x.png" alt="Mal Winter and the Cloud Runners, Pre-order today">
+                                <img width="100%" class="lv-hero-character" src="/assets/img/content/heroes/mal-with-sword@2x.png" alt="Mal Winter and the Cloud Runners, Pre-order today">
                             </div>
                         </div>
 
@@ -168,6 +170,8 @@
         <!-- /.lv-hero-wrapper -->
         
 <!-- CONTENT --><main class="page-content-container">
+
+            <!-- <div class="page-content-container-bleed" data-parallax-scroll="0.3"></div> -->
             <div class="container">
                 <div class="page-content">
 
@@ -231,10 +235,12 @@
                                 <div class="col-md-4">
 
                                     <!-- GIANT BOOK -->
-                                    <span class="book">
-                                        <img width="100%" src="/assets/img/content/book-1.png" alt="Mal Winter and the Cloud Runners">
-                                        <a href="/store/" class="btn-price-sticker">
+                                    <span class="book has-parallax">
+                                        <img class="bg layer" data-depth="0.8" width="100%" src="/assets/img/content/books/book-cloud-runners-bg@2x.png" alt="Mal Winter and the Cloud Runners">
+                                        <img class="fg layer" data-depth="1.0" width="100%" src="/assets/img/content/books/book-cloud-runners-fg@2x.png" alt="Mal Winter and the Cloud Runners">
+                                        <a href="/store/" class="btn-price-sticker layer" data-depth="1.4">
                                             <span class="dollar-sign">$</span>3</a>
+                                        <span class="book-shadow layer" data-depth="0.5"></span>
                                     </span>
                                 </div>
                             </div>
@@ -243,9 +249,9 @@
 
                     <!-- ABOUT DANNY -->
                     <section class="section section-bio">
-                        <div class="container">
+                        <div class="container m-auto">
                             <div class="row">
-                                <div class="col-md-6 offset-md-4 text-center">
+                                <div class="col-md-6 offset-md-5 text-center">
                                     <h2>Danny is an Author &amp; Illustrator from Sydney</h2>
                                     <p>Danny has written movies, short stories and even a poem or two, but the crowning jewel in his body of work is his latest book,
                                         <a href="#">Mal Winter and the Cloud Runners.</a>
@@ -308,16 +314,16 @@
                                     <h3>Recent Posts</h3>
                                     <ul class="list-unstyled mb-2">
                                         <li>
-                                            <a href="#">That's Pie Country. They Do a Lot of Baking Up There.</a>
+                                            <a href="/blog/personal/today-i-wrote-a-lot-when-i-dont-write-i/">Today I wrote a lot, When I Don't Write I...</a>
                                         </li>
                                         <li>
-                                            <a href="#">What's the Deal with Airline Peanuts?</a>
+                                            <a href="/blog/writing/using-colours-in-writing/">Using Colours in Writing</a>
                                         </li>
                                         <li>
-                                            <a href="#">Nothing's Finer Than Being in Your Diner</a>
+                                            <a href="/blog/writing/how-do-you-structure-a-sequel/">How Do You Structure a Sequel? (Asking for a Friend)</a>
                                         </li>
                                         <li>
-                                            <a href="#">Yadda Yadda Yadda</a>
+                                            <a href="/blog/writing/how-i-research-writing-children/">How I Research Writing Children</a>
                                         </li>
                                     </ul>
 
@@ -357,7 +363,7 @@
                                         <div class="col">
                                             <div class="input-group form-group">
                                                 <input class="form-control" id="email" name="Email" type="text" placeholder="Enter Your Email" required>
-                                                <button class="btn btn-primary" type="button">Send</button>
+                                                <button class="btn btn-primary" type="submit">Send</button>
                                                 <i class="fa fa-envelope"></i>
                                             </div>
                                             <small class="error shake animated">
@@ -472,11 +478,11 @@
     <!-- **** JAVASCRIPT **** -->
     <script src="/assets/scripts/minified.js"></script>
     <script>
-    //CLOUD PARALLAX
-    // var target = $('.lv-hero-item')[0];
+    // CLOUD PARALLAX
+    // var target = $('.has-parallax')[0];
     // var parallax = new Parallax(target, {
-    //     limitX: 8,
-    //     limitY: 0,
+    //     limitX: 10,
+    //     limitY: 10,
     // });
     </script>
 

@@ -39,9 +39,11 @@
 
                 <!-- LOGO -->
                 <a class="logo" href="/" title="The Official Danny Beaton Website - Mal Winter and the Cloud Runners" itemprop="url">
-                    <img src="/assets/img/content/logo.svg" alt="Danny Beaton" itemprop="logo">
-                    <span class="text hidden-sm-down">Danny Beaton</span>
-                </a>
+                    <img class="hidden-md-up" src="/assets/img/content/logo.svg" alt="Danny Beaton" itemprop="logo">
+                    <img class="hidden-sm-down" src="/assets/img/content/logo-type.svg" alt="Danny Beaton" itemprop="logo">
+
+                    <!-- <span class="text hidden-sm-down">Danny Beaton</span> -->
+                    </a>
 
                 <!-- HAMBURGER -->
                 <div class="global-header-hamburger hidden-lg-up">
@@ -123,28 +125,39 @@
         <div class="lv-hero-wrapper">
 
             <!-- HERO -->
-            <div class="lv-hero has-height-preset-1X">
+            <div class="lv-hero">
 
                 <!-- HERO ITEM -->
                 <div class="lv-hero-item">
 
                     <!-- PARALLAX BG -->
-                    <div class="bg-layers">
+                    <div class="bg-layers" data-parallax-scroll=".03">
                         <div class="bg-layer-1" style="background-image: url(/assets/img/layout/clouds-layer-1.jpg)"></div>
                         <div class="bg-layer-2" style="background-image: url(/assets/img/layout/clouds-layer-2.png)"></div>
                     </div>
-                    <div class="container m-auto">
+                    <div class="container" data-parallax-scroll="-.06">
                         <div class="row">
-                            <div class="col text-center">
+                            <div class="col-md-5 push-md-7 d-flex align-items-center">
 
                                 <!-- HERO CAPTION -->
-                                <div class="lv-hero-item-caption">
-                                    <h1>Contact</h1>
+                                <div class="lv-hero-item-caption fill-2X">
+
+                                    <!-- TITLE -->
+                                    <h1 class="fill-3X">Contact</h1>
                                 </div>
                             </div>
+                            <div class="col-md-7 pull-md-5 text-center">
+
+                                <!-- SUPPORTING IMAGE -->
+                                <img width="100%" class="lv-hero-character" src="/assets/img/content/heroes/dante@2x.png" alt="Book Character">
+                            </div>
                         </div>
+
+                        <!-- /.row -->
+                        </div>
+
+                    <!-- /.container -->
                     </div>
-                </div>
 
                 <!-- /.lv-hero-item -->
                 </div>
@@ -155,17 +168,169 @@
         <!-- /.lv-hero-wrapper -->
         
 <!-- CONTENT --><main class="page-content-container">
+
+            <!-- <div class="page-content-container-bleed" data-parallax-scroll="0.2"></div> -->
             <div class="container">
                 <div class="page-content">
-                    <div class="container">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <nav class="lv-breadcrumb breadcrumb">
 
-                        <!-- <button class="btn btn-primary" type="button">Send</button>
-                        <button class="btn btn-secondary" type="button">Send</button>
-                <a href="#" class="btn btn-primary">Anchor</a>
-                <a href="#" class="btn btn-secondary">Anchor</a>
-                <a href="" class="btn">hello no style</a> -->
-                    </div>
+                        <!-- <span class="float-left mr-1"><i class="fa fa-arrow-circle-left"></i>&nbsp; Back to</span> -->
+                        
+<!-- <a class="breadcrumb-item" href="/">Home</a> -->
+<!-- <span class="breadcrumb-item">contact</span> -->
+<!-- TOOLS PANEL --><div class="d-flex align-items-center ml-auto">
+
+                            <!-- COMMENT COUNTER -->
+                            <div class="comment-counter mr-3">
+                                <i class="fa fa-comments"></i>
+                                <a href="/contact/#disqus_thread">0 comments</a>
+                            </div>
+
+                            <!-- SOCIAL MEDIA -->
+                            <ul class="social-media">
+                                <li>
+                                    <a class="facebook" href="">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="twitter" href="">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="google-plus" href="">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <section class="section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 offset-md-1X pl-5 pr-5">
+
+                                    <!-- HEADLINE -->
+                                    <h2 class="h3">Need to Reach Danny?</h2>
+
+                                    <!-- <h3 class="subheader">He Loves Hearing from New Readers</h3> -->
+                                    <p>For questions or comments about the book, scheduling a talk, publishing or writing in general.</p>
+                                    <div class="spacer mb-4"></div>
+
+                                    <!-- CONTACT FORM -->
+                                    
+<!-- IF SUCCESS --><div class="alert alert-success alert-dismissible fade show" role="alert" hidden>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <strong>Success!</strong> Thanks for that. Your email has been added to the mailing list.</div>
+
+                                    <!-- IF FAILURE -->
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <strong>Oops!</strong> Something went wrong. Please check your details and try again.</div>
+
+                                    <!-- FORM CONTACT -->
+                                    <form id="contact" data-toggle="validator" novalidate method="post" action="http://liquidvisual.net/dannybeaton.com.au/contact-form/">
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+
+                                                    <!-- NAME -->
+                                                    <div class="form-group">
+                                                        <label for="name">Your Name
+                                                            <small>(required)</small>
+                                                        </label>
+                                                        <input class="form-control" id="name" name="Name" type="text" placeholder="Name" required>
+                                                        <small class="error shake animated">
+                                                            <i class="fa fa-warning"></i>&nbsp; Your name is required.</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+
+                                                    <!-- EMAIL -->
+                                                    <div class="form-group">
+                                                        <label for="email">Your Email
+                                                            <small>(required)</small>
+                                                        </label>
+                                                        <input class="form-control" id="email" name="Email" type="email" placeholder="Email" required>
+                                                        <small class="error shake animated">
+                                                            <i class="fa fa-warning"></i>&nbsp; A valid email is required.</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- REFERRAL -->
+                                            <div class="form-group">
+                                                <label for="referral">How did you find the site?</label>
+                                                <select class="form-control custom-select" name="Referral" id="referral">
+                                                    <option disabled selected>Choose one</option>
+                                                    <option value="Google">Google</option>
+                                                    <option value="Twitter">Twitter</option>
+                                                    <option value="Facebook">Facebook</option>
+                                                    <option value="Friend">Friend</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- MESSAGE -->
+                                            <div class="form-group">
+                                                <label for="message">Your Message
+                                                    <small>(required)</small>
+                                                </label>
+                                                <textarea class="form-control" id="message" name="Message" rows="4" placeholder="Message" required></textarea>
+                                                <small class="error shake animated">
+                                                    <i class="fa fa-warning"></i>&nbsp; A message is required.</small>
+                                            </div>
+
+                                            <!-- SUBMIT -->
+                                            <button type="submit" class="btn btn-primary mb-3 float-right">Send message
+                                                <i class="fa fa-angle-right"></i>
+                                            </button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="col-md-4 offset-md-1X">
+                                    <aside class="sidebar">
+                                        <h3>Contact Information</h3>
+                                        <h4>Location</h4>
+                                        <p>Sydney, Australia</p>
+                                        <h4>Favorite Book</h4>
+                                        <p>Harry Potter</p>
+                                        <h4>Email Address</h4>
+                                        <p>contact@dannybeaton.com.au</p>
+
+                                        <!-- SOCIAL MEDIA -->
+                                        <ul class="social-media mb-4">
+                                            <li>
+                                                <a class="facebook" href="">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="twitter" href="">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="instagram" href="">
+                                                    <i class="fa fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="youtube" href="">
+                                                    <i class="fa fa-youtube"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </main>
@@ -215,16 +380,16 @@
                                     <h3>Recent Posts</h3>
                                     <ul class="list-unstyled mb-2">
                                         <li>
-                                            <a href="#">That's Pie Country. They Do a Lot of Baking Up There.</a>
+                                            <a href="/blog/personal/today-i-wrote-a-lot-when-i-dont-write-i/">Today I wrote a lot, When I Don't Write I...</a>
                                         </li>
                                         <li>
-                                            <a href="#">What's the Deal with Airline Peanuts?</a>
+                                            <a href="/blog/writing/using-colours-in-writing/">Using Colours in Writing</a>
                                         </li>
                                         <li>
-                                            <a href="#">Nothing's Finer Than Being in Your Diner</a>
+                                            <a href="/blog/writing/how-do-you-structure-a-sequel/">How Do You Structure a Sequel? (Asking for a Friend)</a>
                                         </li>
                                         <li>
-                                            <a href="#">Yadda Yadda Yadda</a>
+                                            <a href="/blog/writing/how-i-research-writing-children/">How I Research Writing Children</a>
                                         </li>
                                     </ul>
 
@@ -264,7 +429,7 @@
                                         <div class="col">
                                             <div class="input-group form-group">
                                                 <input class="form-control" id="email" name="Email" type="text" placeholder="Enter Your Email" required>
-                                                <button class="btn btn-primary" type="button">Send</button>
+                                                <button class="btn btn-primary" type="submit">Send</button>
                                                 <i class="fa fa-envelope"></i>
                                             </div>
                                             <small class="error shake animated">
@@ -379,11 +544,11 @@
     <!-- **** JAVASCRIPT **** -->
     <script src="/assets/scripts/minified.js"></script>
     <script>
-    //CLOUD PARALLAX
-    // var target = $('.lv-hero-item')[0];
+    // CLOUD PARALLAX
+    // var target = $('.has-parallax')[0];
     // var parallax = new Parallax(target, {
-    //     limitX: 8,
-    //     limitY: 0,
+    //     limitX: 10,
+    //     limitY: 10,
     // });
     </script>
 
