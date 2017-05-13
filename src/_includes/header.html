@@ -1,12 +1,14 @@
 {% assign settings = site.data.settings %}
 {% assign logo = "/assets/img/content/logo.svg" %}
+{% assign logo_type = "/assets/img/content/logo-type.svg" %}
 
 <div class="container">
 
     <!-- LOGO -->
     <a class="logo" href="/" title="{{ settings.title_homepage }}" itemprop="url">
-        <img src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
-        <span class="text hidden-sm-down">Danny Beaton</span>
+        <img class="hidden-md-up" src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
+        <img class="hidden-sm-down" src="{{ logo_type }}" alt="{{ settings.company }}" itemprop="logo">
+        <!-- <span class="text hidden-sm-down">Danny Beaton</span> -->
     </a>
 
     <!-- HAMBURGER -->

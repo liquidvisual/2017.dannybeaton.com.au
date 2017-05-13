@@ -32,6 +32,30 @@ html.has-loaded .lv-page-loader {
 }
 
 //-----------------------------------------------------------------
+// MOVE TO ANIMATIONS
+//-----------------------------------------------------------------
+
+.lv-hero-character {
+    opacity: 0;
+}
+
+html.has-loaded .lv-hero-character {
+    animation: fadeInLeft 1s ease 0.1s alternate 1 forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+//-----------------------------------------------------------------
 // DEV LOADER TURNED OFF FOR SPEED
 //-----------------------------------------------------------------
 
