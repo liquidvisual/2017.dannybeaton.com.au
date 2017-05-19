@@ -23,6 +23,7 @@ collections:
   docs:
     output: true
 
+# Blog
 collections:
   posts:
     output: true
