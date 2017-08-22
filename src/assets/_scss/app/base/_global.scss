@@ -66,9 +66,9 @@
 	//=========================================
 
 	> .container {
-		@include media-breakpoint-down(md) {
-		    // padding: rem-calc(0 15); // expand readability on portrait
-		}
+		// @include media-breakpoint-down(md) {
+		//     // padding: rem-calc(0 15); // expand readability on portrait
+		// }
 
 		@include media-breakpoint-down(sm) {
 		    padding: 0; // page depth effect is gone, grid controls padding now
